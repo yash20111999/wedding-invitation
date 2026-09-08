@@ -1,0 +1,1464 @@
+<title>Meher & Arjun</title>
+<meta name="description" content="Meher & Arjun are getting married · Sunday 6 December 2026 · Ambar Bagh Palace, Jaipur. Five invitation designs, seven colour themes, one three-day celebration.">
+<meta property="og:title" content="Meher & Arjun · 6 December 2026">
+<meta property="og:description" content="You are invited. Three days of celebration at Ambar Bagh Palace, Jaipur. Tap to open the invitation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Jost:wght@300;400;500&family=Tiro+Devanagari+Hindi&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Yatra+One&family=Cinzel:wght@400;600&family=Bebas+Neue&family=Manrope:wght@300;400;600&display=swap">
+<style>
+  /* ═══════════════════════════════════════════════════════════════════════════
+     TOKENS — two orthogonal axes.
+     data-palette (body) sets the colour world; data-design (body) sets the treatment.
+     Every design reads only these semantic names, so any palette works with any design.
+     ═══════════════════════════════════════════════════════════════════════════ */
+  :root, body{
+    /* Emerald — the house palette from the 2026-09-03 run */
+    --ground:#0F2A24; --ground-2:#12332B; --surface:#143A32; --env:#1B4A3F; --env-deep:#163B33; --env-light:#22584B;
+    --paper:#F5E9D6; --paper-edge:#E6D3B6; --ink:#12332B; --ink-soft:#3C5A50;
+    --brass:#C9A24E; --brass-light:#E8CC85; --brass-deep:#9E7B2E;
+    --marigold:#E98A2B; --marigold-deep:#C4621B; --marigold-light:#F3A845; --leaf:#4F7A5A; --leaf-deep:#35594A;
+    --cream:#EFE3CC; --cream-dim:rgba(239,227,204,.84); --line:rgba(201,162,78,.35);
+    --seal-core:#0F2A24;
+    /* --metal is the precious-metal surface (wax seal, royal mandala, film play ring). It defaults to
+       the brand accent, and is overridden only where the accent's hue collides with the ground — see
+       the 2026-09-04 audit: a palette can pass every contrast check and still turn the seal into a
+       coloured sticker, because the eye reads metal by hue/temperature, not by contrast ratio. */
+    --metal:var(--brass); --metal-light:var(--brass-light); --metal-deep:var(--brass-deep);
+    --accent-ink:color-mix(in oklab,var(--marigold-deep),var(--ink) 40%);
+    --display:"Bodoni Moda","Bodoni 72","Didot",Georgia,serif;
+    --sans:"Jost","Futura","Avenir Next","Helvetica Neue",Arial,sans-serif;
+    --hindi:"Tiro Devanagari Hindi","Noto Sans Devanagari","Mangal",serif;
+    --ease-out:cubic-bezier(.2,.8,.2,1); --ease-in-out:cubic-bezier(.65,0,.35,1); --spring:cubic-bezier(.34,1.5,.64,1); --gravity:cubic-bezier(.5,0,1,1);
+    --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  /* Demon Slayer — cat-prep's dark theme: "indigo night, ember gold, haori green" (demon-slayer-theme.json, verbatim) */
+  body[data-palette="demon"]{
+    --ground:#0b0a14; --ground-2:#100e1c; --surface:#1b1830; --env:#221e3c; --env-deep:#1b1830; --env-light:#38335a;
+    --paper:#f2e6c8; --paper-edge:#cbaf72; --ink:#2c2415; --ink-soft:#5a4a2c;
+    --brass:#dcb35c; --brass-light:#ecd08f; --brass-deep:#a7853c;
+    --marigold:#b25563; --marigold-deep:#8a3c4a; --marigold-light:#d4788a; --leaf:#4c9478; --leaf-deep:#2f6b53;
+    --cream:#eee9f7; --cream-dim:rgba(238,233,247,.84); --line:rgba(220,179,92,.35); --seal-core:#241c08;
+  }
+  /* Mango store — Highstreet "Amber" (design-system.html + theme-brief.md, verbatim hex): the stall after dusk, lit by amber */
+  body[data-palette="amber"]{
+    --ground:#2b1003; --ground-2:#3a1605; --surface:#3b1a08; --env:#92400e; --env-deep:#78350f; --env-light:#b45309;
+    --paper:#f8f7f4; --paper-edge:#e7e0d2; --ink:#422006; --ink-soft:#b45309;
+    --brass:#f59e0b; --brass-light:#fbbf24; --brass-deep:#b45309;
+    --marigold:#f97316; --marigold-deep:#d97706; --marigold-light:#fcd34d; --leaf:#059669; --leaf-deep:#047857;
+    --cream:#fef3c7; --cream-dim:rgba(254,243,199,.84); --line:rgba(251,191,36,.35); --seal-core:#422006;
+    /* the one warm ground: accent gold (38°) sits 15° off a 20° ground, so gold cannot separate.
+       Cool silver instead, 171° away — warm ground, cool metal. */
+    --metal:#cbd3da; --metal-light:#eaeff3; --metal-deep:#8d979f;
+  }
+  /* Mango store — "Orchard": wholesome, organic, spring */
+  body[data-palette="orchard"]{
+    --ground:#052e16; --ground-2:#0a3d1f; --surface:#0f4a26; --env:#166534; --env-deep:#14532d; --env-light:#15803d;
+    --paper:#f4f7f1; --paper-edge:#dfe7d8; --ink:#052e16; --ink-soft:#166534;
+    --brass:#4ade80; --brass-light:#86efac; --brass-deep:#15803d;
+    --marigold:#65a30d; --marigold-deep:#4d7c0f; --marigold-light:#a3e635; --leaf:#15803d; --leaf-deep:#166534;
+    --cream:#eafbe7; --cream-dim:rgba(234,251,231,.84); --line:rgba(74,222,128,.35); --seal-core:#052e16;
+    /* accent is mint (hue 142°) against a 145° ground — 1° apart. Real gold, 99° away. */
+    --metal:#d4af37; --metal-light:#f0d97d; --metal-deep:#9a7b1f;
+  }
+  /* Mango store — "Coastal": the only cool-hue preset, marine with a terracotta counter-accent */
+  body[data-palette="coastal"]{
+    --ground:#062a3d; --ground-2:#083a52; --surface:#0b3f5a; --env:#075985; --env-deep:#0c4a6e; --env-light:#0369a1;
+    --paper:#f7f4ee; --paper-edge:#e6dfd2; --ink:#062a3d; --ink-soft:#0369a1;
+    --brass:#38bdf8; --brass-light:#7dd3fc; --brass-deep:#0369a1;
+    --marigold:#e07a5f; --marigold-deep:#c25a3f; --marigold-light:#f0a48a; --leaf:#2a9d8f; --leaf-deep:#1f7a6f;
+    --cream:#e0f2fe; --cream-dim:rgba(224,242,254,.84); --line:rgba(56,189,248,.35); --seal-core:#062a3d;
+    /* accent is sky blue (198°) against a 201° ground — 3° apart. Warm gold, 161° away. */
+    --metal:#d9a441; --metal-light:#f2c877; --metal-deep:#a1741f;
+  }
+  /* Mango store — "Plum": wine-berry with real gold, the premium/gifting preset */
+  body[data-palette="plum"]{
+    --ground:#3a0d24; --ground-2:#4a1230; --surface:#52163a; --env:#611a42; --env-deep:#4f1536; --env-light:#7c2354;
+    --paper:#f8f2ee; --paper-edge:#eadcd4; --ink:#3a0d24; --ink-soft:#7c2354;
+    --brass:#c9a227; --brass-light:#e3c45a; --brass-deep:#9a7a1a;
+    --marigold:#e879b8; --marigold-deep:#c04f93; --marigold-light:#f2a3ce; --leaf:#5f7a5a; --leaf-deep:#44593f;
+    --cream:#fce7f3; --cream-dim:rgba(252,231,243,.84); --line:rgba(201,162,39,.4); --seal-core:#3a0d24;
+  }
+  /* Mango store — "Slate": near-monochrome, one teal accent */
+  body[data-palette="slate"]{
+    --ground:#0f172a; --ground-2:#1e293b; --surface:#1f2b40; --env:#334155; --env-deep:#283548; --env-light:#475569;
+    --paper:#f1f5f9; --paper-edge:#dbe2ea; --ink:#0f172a; --ink-soft:#334155;
+    --brass:#cbd5e1; --brass-light:#e2e8f0; --brass-deep:#94a3b8;
+    --marigold:#0d9488; --marigold-deep:#0f766e; --marigold-light:#2dd4bf; --leaf:#475569; --leaf-deep:#334155;
+    --cream:#e2e8f0; --cream-dim:rgba(226,232,240,.84); --line:rgba(203,213,225,.3); --seal-core:#0f172a;
+    /* accent is a cool near-neutral (213°) against a 222° ground — 2° apart. Restrained warm
+       brass, 177° away, and the only warm note in a deliberately monochrome palette. */
+    --metal:#c3a468; --metal-light:#e0c99a; --metal-deep:#8d7440;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--ground);color:var(--cream);font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.62;
+       min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased;transition:background .3s}
+  body:not(.revealed){overflow:hidden;height:100vh}
+  a{color:var(--brass-light)}
+  button{font:inherit}
+  :focus-visible{outline:2px solid var(--brass-light);outline-offset:3px}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+  /* ── review controls: design + theme colour, separate dropdowns; replay the reveal ── */
+  .ctl{display:none;position:fixed;top:10px;left:50%;transform:translateX(-50%);z-index:30;align-items:center;gap:6px;padding:6px 8px;border-radius:999px;
+       background:rgba(18,16,14,.78);color:#fff;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 10px 30px rgba(0,0,0,.35);font-family:"Jost",system-ui,sans-serif;font-weight:400;font-size:13.5px;white-space:nowrap}
+  .ctl label{display:flex;align-items:center;gap:6px;padding:0 4px}
+  .ctl label span{opacity:.6;letter-spacing:.04em}
+  .ctl select{appearance:none;-webkit-appearance:none;background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:6px 26px 6px 12px;font:inherit;cursor:pointer;
+       background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23fff' stroke-width='1.4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center}
+  .ctl select:hover{background-color:rgba(255,255,255,.16)}
+  .ctl select option{color:#111}
+  .ctl button{background:none;border:0;color:#fff;opacity:.8;cursor:pointer;padding:6px 10px;border-radius:999px;display:flex;align-items:center;gap:6px}
+  .ctl button:hover{opacity:1;background:rgba(255,255,255,.1)}
+  .ctl .sw{width:10px;height:10px;border-radius:50%;background:var(--brass);box-shadow:0 0 0 2px var(--ground) inset}
+  body[data-review="1"] .ctl{display:flex}
+  /* three selects no longer fit one pill on a phone: become a tidy rounded panel that wraps,
+     and move the mute pill to the top so it cannot sit under the taller control. */
+  @media (max-width:520px){
+    .ctl{top:auto;bottom:10px;font-size:12.5px;gap:6px;padding:8px;border-radius:18px;flex-wrap:wrap;justify-content:center;
+         max-width:calc(100vw - 20px);white-space:normal}
+    .ctl label{padding:0} .ctl label span{display:none} .ctl select{padding:6px 22px 6px 10px}
+    body[data-review="1"] .mute{bottom:auto;top:14px}
+  }
+  /* sound: one mute pill, visible on the sealed stage and after the reveal; state per viewer */
+  .mute{position:fixed;right:14px;bottom:14px;z-index:31;width:42px;height:42px;border-radius:50%;border:1px solid color-mix(in srgb,var(--cream),transparent 55%);background:color-mix(in srgb,var(--ground),transparent 20%);color:var(--cream);display:grid;place-items:center;cursor:pointer;padding:0;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:transform .2s var(--ease-out),opacity .3s}
+  .mute:hover{transform:scale(1.06)} .mute:active{transform:scale(.95)}
+  .mute svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  .mute .off{display:none} .mute[aria-pressed="true"] .on{display:none} .mute[aria-pressed="true"] .off{display:block}
+  .mute[aria-pressed="true"]{opacity:.7}
+  [data-design=minimal] .mute{border-color:var(--line);background:var(--paper);color:var(--ink)}
+  [data-design=film] .mute{bottom:calc(7vh + 12px)}
+  @media (max-width:520px){ body[data-review="1"] .mute{bottom:62px} }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     DESIGN 1 · LETTERPRESS (default, no attribute) — paper card on a jewel ground,
+     Didone italic, marigold garland, sealed envelope. Everything below is also the
+     base the other four designs restyle.
+     ═══════════════════════════════════════════════════════════════════════════ */
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;
+       background:radial-gradient(120% 80% at 50% 0%,color-mix(in oklab,var(--env-light),transparent 45%),transparent 60%),radial-gradient(90% 60% at 50% 110%,rgba(0,0,0,.5),transparent 60%)}
+  .tlink{font-family:var(--display);font-style:italic;font-size:17px;color:var(--brass-light);text-decoration:underline;text-underline-offset:4px;
+       text-decoration-color:color-mix(in srgb,var(--brass-light),transparent 55%);background:none;border:0;padding:0;cursor:pointer;transition:text-decoration-color .25s}
+  .tlink:hover{text-decoration-color:var(--brass-light)}
+  .tlink:active{transform:scale(.97)}
+
+  /* petals */
+  .petals{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:1}
+  .petals span{position:absolute;top:-6vh;animation:fall var(--t) linear var(--d) infinite}
+  .petals span i{display:block;width:var(--s);height:calc(var(--s)*1.6);background:linear-gradient(160deg,var(--marigold-light),var(--marigold-deep));
+       border-radius:60% 60% 55% 55%/70% 70% 40% 40%;opacity:.7;animation:sway calc(var(--t)/3) var(--ease-in-out) infinite alternate}
+  .petals span:nth-child(3n) i{background:linear-gradient(160deg,var(--marigold),var(--marigold-deep));opacity:.55}
+  .revealed .petals span:nth-child(n+6){display:none}
+  .revealed .petals span i{opacity:.45}
+  @keyframes fall{to{transform:translateY(112vh)}}
+  @keyframes sway{from{transform:translateX(-22px) rotate(-40deg) skewX(-8deg)}to{transform:translateX(22px) rotate(50deg) skewX(8deg)}}
+
+  /* stage: only the active design's reveal is present */
+  .stage{position:fixed;inset:0;display:grid;place-items:center;z-index:5}
+  .revealed .stage{visibility:hidden;pointer-events:none}
+  .stage-inner{display:grid;justify-items:center;gap:26px;padding:24px;width:100%}
+  .rv{display:none}
+  .stage .hint,.stage .skip{transition:opacity .4s}
+  .stage.flip .hint,.stage.flip .skip{opacity:0}
+  .stage .hint{margin:0;font-size:13.5px;color:var(--cream-dim);letter-spacing:.06em;text-align:center}
+  .stage .hint b{font-weight:400;color:var(--brass-light)}
+  .skip{margin-top:-8px;font-size:13.5px;color:var(--cream-dim);background:none;border:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+
+  /* envelope (letterpress reveal) */
+  body:not([data-design]) .rv-env,body[data-design="letterpress"] .rv-env{display:block}
+  .envelope{position:relative;width:min(86vw,400px);aspect-ratio:1.5;perspective:1400px;filter:drop-shadow(0 30px 40px rgba(0,0,0,.5))}
+  .env-back,.env-lining,.env-pocket{transition:transform .75s var(--ease-in-out),opacity .6s ease}
+  .flip .env-back,.flip .env-lining,.flip .env-pocket{transform:translateY(46px) scale(.93);opacity:0}
+  .env-back{position:absolute;inset:0;background:var(--env-deep);border-radius:10px}
+  .env-lining{position:absolute;inset:0;border-radius:10px;background:repeating-linear-gradient(135deg,var(--env-light) 0 5px,var(--env-deep) 5px 14px);opacity:.9}
+  .env-card{position:absolute;left:6%;right:6%;bottom:5%;height:94%;background:var(--paper);border-radius:7px;
+       box-shadow:0 -6px 20px rgba(0,0,0,.25);display:grid;place-items:center;text-align:center;color:var(--ink);transition:transform .95s var(--ease-out)}
+  .env-card::before{content:"";position:absolute;inset:0;background-image:var(--grain);opacity:.16;mix-blend-mode:multiply;border-radius:inherit;pointer-events:none}
+  .env-card .mini{font-family:var(--display);font-style:italic;font-size:clamp(22px,7vw,32px);line-height:1.1;margin:0;transform:translateY(-14%);opacity:0;transition:opacity .35s}
+  .env-card .mini small{display:block;font-family:var(--sans);font-style:normal;font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px}
+  .rising .env-card{transform:translateY(-78%)}
+  .rising .mini{opacity:1}
+  .flip .mini{opacity:0;transition-delay:.1s}
+  .env-pocket{position:absolute;inset:0;border-radius:10px;background:linear-gradient(180deg,var(--env) 0%,var(--env-deep) 100%);clip-path:polygon(0 0,50% 56%,100% 0,100% 100%,0 100%)}
+  .env-pocket::before{content:"";position:absolute;inset:0;background-image:var(--grain);opacity:.14;mix-blend-mode:overlay}
+  .env-pocket::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.06),transparent 50%,rgba(0,0,0,.14))}
+  .edge{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+  .flap{position:absolute;left:0;right:0;top:0;height:57%;transform-origin:50% 0;transform-style:preserve-3d;z-index:4;transition:transform 1s var(--ease-in-out) .22s,opacity .35s ease}
+  .flap>i{position:absolute;inset:0;clip-path:polygon(0 0,100% 0,50% 100%);backface-visibility:hidden}
+  .flap .front{background:linear-gradient(180deg,var(--env-light),var(--env));transition:filter 1s var(--ease-in-out) .22s}
+  .flap .front::before{content:"";position:absolute;inset:0;background-image:var(--grain);opacity:.14;mix-blend-mode:overlay}
+  .flap .back{background:repeating-linear-gradient(135deg,var(--env-light) 0 5px,var(--env-deep) 5px 14px);transform:rotateX(180deg);filter:brightness(.75);transition:filter 1s var(--ease-in-out) .22s}
+  .opening .flap{transform:rotateX(-178deg);animation:sink 1s step-end .22s forwards}
+  .opening .flap .front{filter:brightness(.5)}
+  .opening .flap .back{filter:brightness(1.05)}
+  .rising .flap{opacity:0}
+  @keyframes sink{0%,49%{z-index:4}50%,100%{z-index:-1}}
+  .seal{position:absolute;left:50%;top:57%;width:27%;aspect-ratio:1;transform:translate(-50%,-50%);z-index:6;background:none;border:0;padding:0;cursor:pointer;transition:transform .25s var(--ease-out)}
+  .seal:hover{transform:translate(-50%,-50%) scale(1.05)}
+  .seal:active{transform:translate(-50%,-50%) scale(.96)}
+  .seal-in{position:absolute;inset:0;animation:breath 3.2s ease-in-out infinite}
+  @keyframes breath{50%{transform:scale(1.03)}}
+  .half{position:absolute;inset:0;width:100%;height:100%}
+  .half.hl{clip-path:polygon(0 0,52% 0,47% 22%,55% 41%,46% 60%,53% 80%,49% 100%,0 100%)}
+  .half.hr{clip-path:polygon(52% 0,100% 0,100% 100%,49% 100%,53% 80%,46% 60%,55% 41%,47% 22%)}
+  .opening .seal{pointer-events:none}
+  .opening .seal-in{animation:none}
+  .opening .half.hl{animation:dropL .75s var(--gravity) .05s forwards}
+  .opening .half.hr{animation:dropR .8s var(--gravity) .05s forwards}
+  @keyframes dropL{to{transform:translate(-26px,120px) rotate(-16deg);opacity:0}}
+  @keyframes dropR{to{transform:translate(22px,140px) rotate(13deg);opacity:0}}
+
+  /* the invitation page */
+  .page{position:relative;z-index:2;width:min(100%,460px);margin:0 auto;padding:clamp(20px,5vw,48px) 16px 80px;opacity:0;visibility:hidden}
+  .revealed .page{opacity:1;visibility:visible}
+  .card{background:var(--paper);color:var(--ink);border-radius:8px;padding:50px 28px 40px;text-align:center;position:relative;overflow:hidden;
+       box-shadow:0 40px 60px -30px rgba(0,0,0,.7),0 0 0 1px rgba(0,0,0,.08) inset;transition:background .3s,color .3s}
+  .card::before{content:"";position:absolute;inset:0;background-image:var(--grain);opacity:.16;mix-blend-mode:multiply;pointer-events:none}
+  .card::after{content:"";position:absolute;inset:14px;border:1px solid var(--line);border-radius:4px;pointer-events:none}
+  .mono{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);font-family:var(--display);font-style:italic;font-size:clamp(150px,44vw,200px);
+       line-height:1;color:var(--ink);opacity:.045;pointer-events:none;user-select:none;white-space:nowrap}
+  .card>*:not(.mono){position:relative}
+  .garland{display:block;width:100%;height:auto;margin:-40px 0 8px;opacity:0;transform:translateY(-22px)}
+  .revealed .garland{animation:drop .8s var(--spring) .15s forwards}
+  @keyframes drop{to{opacity:1;transform:none}}
+  .garland .sw{transform-box:fill-box;transform-origin:50% 0;animation:gsway var(--gd,5s) ease-in-out var(--gp,0s) infinite alternate}
+  @keyframes gsway{from{transform:rotate(-2.2deg)}to{transform:rotate(2.2deg)}}
+  .eyebrow{font-family:var(--hindi);font-size:20px;color:var(--accent-ink);margin:0;line-height:1.2}
+  .eyebrow small{display:block;font-family:var(--sans);font-size:12.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px}
+  .with{margin:22px 0 6px;font-size:13.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
+  .names{font-family:var(--display);font-style:italic;font-weight:400;margin:6px 0 0;line-height:1.02;font-size:clamp(46px,14vw,66px);letter-spacing:-.01em;text-wrap:balance}
+  .names .amp{display:block;font-size:.62em;line-height:1.15;margin:2px 0;color:transparent;
+       background:linear-gradient(100deg,var(--brass) 35%,var(--brass-light) 50%,var(--brass) 65%);background-size:260% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;opacity:0;animation-play-state:paused}
+  .revealed .names .amp{animation:rise .8s var(--ease-out) 1s forwards,sheen 1.3s ease 2.1s 1 forwards;animation-play-state:running}
+  @keyframes sheen{to{background-position:0 0}}
+  .l{display:inline-block;opacity:0;transform:translateY(.45em) rotate(var(--r,0deg));animation:rise .9s var(--ease-out) forwards;animation-delay:calc(var(--b,.6s) + var(--i)*55ms + var(--j,0ms));animation-play-state:paused}
+  .revealed .l{animation-play-state:running}
+  @keyframes rise{to{opacity:1;transform:none}}
+  .anim{opacity:0;transform:translateY(14px);animation:rise .9s var(--ease-out) forwards;animation-play-state:paused}
+  .revealed .anim{animation-play-state:running}
+  .invite{margin:18px 0 0;font-size:15px;color:var(--ink-soft);letter-spacing:.04em}
+  .date{margin:22px 0 0;font-family:var(--display);font-size:clamp(28px,8.5vw,40px);line-height:1;font-weight:500;color:var(--ink);font-variant-numeric:lining-nums;--b:1.5s}
+  .date small{display:block;font-family:var(--sans);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px;font-weight:400}
+  .venue-line{margin:20px 0 0;font-size:14px;color:var(--ink)}
+  .venue-line em{font-family:var(--display);font-style:italic;font-size:19px}
+  .sprig{display:block;width:96px;height:auto;margin:22px auto 0;transform:scaleX(0);opacity:0}
+  .revealed .sprig{animation:sprig .7s var(--ease-out) 2.1s forwards}
+  @keyframes sprig{to{transform:none;opacity:1}}
+  .share{display:flex;justify-content:center;gap:18px;margin:20px 0 0;font-size:12.5px;letter-spacing:.22em;text-transform:uppercase}
+  .share a,.share button{color:var(--ink);background:none;border:0;padding:0;cursor:pointer;font:inherit;letter-spacing:inherit;text-transform:inherit;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--brass);transition:color .2s}
+  .share a:hover,.share button:hover{color:var(--accent-ink)}
+  .share a:active,.share button:active{transform:scale(.97)}
+  .cue{margin:24px 0 0;font-size:12.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft)}
+  .cue svg{display:block;margin:8px auto 0;animation:bob 2.2s ease-in-out infinite}
+  @keyframes bob{50%{transform:translateY(5px)}}
+  .toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,12px);background:var(--paper);color:var(--ink);font-size:13.5px;letter-spacing:.08em;padding:10px 18px;border-radius:999px;opacity:0;pointer-events:none;transition:.3s var(--ease-out);z-index:9}
+  .toast.on{opacity:1;transform:translate(-50%,0)}
+
+  section.block{margin-top:44px;opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease-out),transform .9s var(--ease-out)}
+  section.block.in{opacity:1;transform:none}
+  .label{font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--brass);text-align:center;margin:0 0 18px;font-weight:500}
+  .label::after{content:"";display:block;width:26px;height:1px;background:var(--brass);margin:12px auto 0;opacity:.6}
+
+  /* countdown: one Didone line, digits roll */
+  .count{display:flex;justify-content:center;align-items:flex-start;gap:6px;margin:0;font-family:var(--display);font-weight:500;color:var(--cream)}
+  .count .unit{display:grid;justify-items:center;min-width:2.2ch}
+  .count .num{display:block;position:relative;height:1em;line-height:1;overflow:hidden;font-size:clamp(38px,11vw,52px);font-variant-numeric:tabular-nums lining-nums}
+  .count .num i{display:block;font-style:normal}
+  .count .num i.out{animation:rollOut .26s var(--ease-in-out) forwards}
+  .count .num i.in{position:absolute;left:0;right:0;top:0;animation:rollIn .26s var(--ease-out) forwards}
+  .count .num i.fout{animation:fade .2s ease forwards}
+  .count .num i.fin{position:absolute;left:0;right:0;top:0;animation:fade .2s ease reverse forwards}
+  @keyframes rollOut{to{transform:translateY(-100%);opacity:0}}
+  @keyframes rollIn{from{transform:translateY(100%);opacity:0}to{transform:none;opacity:1}}
+  @keyframes fade{to{opacity:0}}
+  .count small{font-family:var(--sans);font-weight:400;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--cream-dim);margin-top:8px}
+  .count .sep{font-size:clamp(38px,11vw,52px);line-height:1;color:var(--brass);opacity:.8;padding-top:.02em}
+  .count-note{text-align:center;font-size:15px;color:var(--cream-dim);margin:16px 0 0}
+  .count.dayof .unit.d,.count.dayof .sep.d{display:none}
+
+  /* ── the celebrations: line draws, a light travels it as you scroll, icons draw themselves in, events open on tap ── */
+  .timeline{list-style:none;margin:0;padding:0 0 0 4px;position:relative;--x:19px;overflow-anchor:none}
+  .timeline::before{content:"";position:absolute;left:var(--x);top:14px;bottom:14px;width:1px;background:linear-gradient(var(--line),var(--brass),var(--line));transform:scaleY(0);transform-origin:top;transition:transform 1s var(--ease-in-out) .1s}
+  .in .timeline::before{transform:scaleY(1)}
+  .timeline .prog{position:absolute;left:calc(var(--x) - 1px);top:14px;bottom:14px;width:3px;border-radius:3px;background:linear-gradient(var(--brass-light),var(--marigold));transform:scaleY(var(--p,0));transform-origin:top;
+       box-shadow:0 0 14px color-mix(in srgb,var(--brass-light),transparent 40%);transition:transform .2s linear;pointer-events:none}
+  .timeline .prog::after{content:"";position:absolute;left:50%;bottom:-4px;width:9px;height:9px;border-radius:50%;background:var(--brass-light);transform:translateX(-50%) scaleY(calc(1/max(var(--p),.001)));box-shadow:0 0 12px var(--brass-light)}
+  .timeline li{position:relative;opacity:0;transform:translateY(14px);transition:opacity .6s var(--ease-out) calc(var(--k)*90ms),transform .6s var(--ease-out) calc(var(--k)*90ms)}
+  .in .timeline li{opacity:1;transform:none}
+  .timeline li.day{font-size:12.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--cream-dim);padding:16px 0 4px 54px;white-space:nowrap;position:relative}
+  .timeline li.day::after{content:"";position:absolute;left:54px;bottom:0;height:1px;width:0;background:var(--line);transition:width .8s var(--ease-out) calc(var(--k)*90ms + .2s)}
+  .in .timeline li.day::after{width:120px}
+  .ev-head{display:grid;grid-template-columns:40px 1fr auto;gap:14px;align-items:start;width:100%;text-align:left;padding:12px 0;background:none;border:0;color:inherit;cursor:pointer;border-radius:8px}
+  .ev-head:hover .dot{transform:scale(1.08)}
+  .ev-head:active .dot{transform:scale(.96)}
+  .dot{width:40px;height:40px;display:grid;place-items:center;background:var(--ground);position:relative;border-radius:50%;color:var(--marigold-light);transition:transform .25s var(--ease-out),color .3s}
+  .dot .ico{width:28px;height:28px;overflow:visible}
+  .ico path,.ico circle,.ico line{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1}
+  .ico .f{fill:currentColor;stroke:none;opacity:0;transition:opacity .5s calc(var(--k)*90ms + 1s)}
+  .in .ico path,.in .ico circle,.in .ico line{animation:draw 1.1s var(--ease-out) calc(var(--k)*90ms + .35s) forwards}
+  .in .ico .f{opacity:.85}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  /* per-icon idle life, only once drawn */
+  .in .ico.mehndi{animation:wobble 5s ease-in-out 1.6s infinite}
+  @keyframes wobble{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+  .in .ico.sangeet .n1{animation:notebob 1.6s ease-in-out 1.5s infinite}
+  .in .ico.sangeet .n2{animation:notebob 1.6s ease-in-out 1.9s infinite}
+  @keyframes notebob{50%{transform:translateY(-2px)}}
+  .in .ico.haldi .d1{animation:dropup 2.4s ease-in-out 1.8s infinite}
+  .in .ico.haldi .d2{animation:dropup 2.4s ease-in-out 2.4s infinite}
+  .in .ico.haldi .d3{animation:dropup 2.4s ease-in-out 2.9s infinite}
+  @keyframes dropup{0%,100%{transform:translateY(0);opacity:.85}50%{transform:translateY(-3px);opacity:.4}}
+  .in .ico.pheras .flame{transform-box:fill-box;transform-origin:50% 100%;animation:flick .5s ease-in-out 1.8s infinite alternate}
+  @keyframes flick{from{transform:scaleY(.9) scaleX(1.05)}to{transform:scaleY(1.12) scaleX(.94)}}
+  .in .ico.reception .ray{transform-box:fill-box;transform-origin:50% 100%;animation:burst 4s var(--ease-out) 2.5s infinite}
+  @keyframes burst{0%,68%{transform:scale(1);opacity:1}78%{transform:scale(1.15);opacity:.35}84%{transform:scale(.6);opacity:.35}100%{transform:scale(1);opacity:1}}
+  .ev-t h3{margin:0;font-family:var(--display);font-style:italic;font-weight:400;font-size:24px;line-height:1.1;color:var(--cream)}
+  .when{margin:4px 0 0;font-size:13.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-light);font-variant-numeric:tabular-nums;display:flex;flex-wrap:wrap;gap:0 10px}
+  .when span{white-space:nowrap;display:inline-block;opacity:0;transform:translateX(8px);transition:opacity .5s var(--ease-out) calc(var(--k)*90ms + .5s),transform .5s var(--ease-out) calc(var(--k)*90ms + .5s)}
+  .when span+span{transition-delay:calc(var(--k)*90ms + .62s)}
+  .in .when span{opacity:1;transform:none}
+  .when span+span::before{content:"·";margin-right:10px;color:var(--brass)}
+  .ev-eta{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--cream);font-weight:500;background:color-mix(in srgb,var(--brass),transparent 88%);border:1px solid color-mix(in srgb,var(--brass),transparent 62%);border-radius:999px;padding:5px 11px;margin-top:4px;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .ev.past .ev-head{opacity:.72}
+  .ev.past .ev-eta{opacity:.8}
+  .ev.next .dot::after{content:"";position:absolute;inset:-3px;border:1px solid var(--brass);border-radius:50%;animation:ring 2.6s ease-in-out infinite}
+  @keyframes ring{50%{transform:scale(1.12);opacity:.5}}
+  .ev-body{display:grid;grid-template-rows:0fr;visibility:hidden;transition:grid-template-rows .45s var(--ease-out),visibility 0s linear .45s;padding-left:54px}
+  .ev-body>div{overflow:hidden}
+  .ev.open .ev-body{grid-template-rows:1fr;visibility:visible;transition:grid-template-rows .45s var(--ease-out),visibility 0s}
+  .ev-body p{margin:0 0 10px;font-size:15px;color:var(--cream-dim);max-width:34ch}
+  .ev-meta{margin:0 0 14px;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:13.5px}
+  .ev-meta dt{color:var(--brass-light);letter-spacing:.1em;text-transform:uppercase;font-size:12px;padding-top:2px}
+  .ev-meta dd{margin:0;color:var(--cream)}
+  .chev{width:14px;height:14px;justify-self:end;align-self:center;grid-column:3;grid-row:2;color:var(--cream-dim);transition:transform .35s var(--ease-out);display:none}
+  .ev-t::after{content:"";display:block;width:0;height:1px;background:var(--brass);margin-top:8px;opacity:.7;transition:width .4s var(--ease-out)}
+  .ev.open .ev-t::after{width:38px}
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     EVENT LAYOUT — a third axis (data-layout), independent of design and palette.
+     The brief: "something like the Apple site". What that means concretely, and
+     what these two layouts borrow: information is never hidden behind a tap on a
+     marketing page, type is large and confident, air does the separating instead
+     of rules and boxes, and a row of tiles is swiped, not expanded.
+     `list` is the original timeline accordion and stays the default.
+     ═══════════════════════════════════════════════════════════════════════════ */
+
+  /* ── CARDS · a swipeable lineup of tiles (Apple's product-row pattern) ────── */
+  body[data-layout=cards] .timeline{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
+       scroll-padding-inline:16px;padding:4px 16px 22px;margin:0 -16px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  body[data-layout=cards] .timeline::-webkit-scrollbar{display:none}
+  body[data-layout=cards] .timeline::before,
+  body[data-layout=cards] .timeline .prog{display:none}
+  body[data-layout=cards] li.day{display:none}                     /* the day rides on each card instead */
+  body[data-layout=cards] .ev{flex:0 0 min(76%,290px);scroll-snap-align:center;background:var(--surface);
+       border:1px solid color-mix(in srgb,var(--brass),transparent 82%);border-radius:24px;padding:20px 20px 24px;
+       display:flex;flex-direction:column}
+  body[data-layout=cards] .ev::before{content:attr(data-day);display:block;font-size:12px;letter-spacing:.26em;
+       text-transform:uppercase;color:var(--cream-dim);margin-bottom:16px}
+  body[data-layout=cards] .ev-head{grid-template-columns:auto 1fr;grid-template-rows:auto auto;gap:14px;
+       padding:0;cursor:default;align-items:center}
+  body[data-layout=cards] .dot{grid-column:1;grid-row:1}
+  body[data-layout=cards] .ev-eta{grid-column:2;grid-row:1;justify-self:end;margin:0}
+  body[data-layout=cards] .ev-t{grid-column:1/-1;grid-row:2}
+  body[data-layout=cards] .ev-t h3{font-size:27px}
+  body[data-layout=cards] .ev-t::after{display:none}
+  body[data-layout=cards] .ev-body{padding-left:0;margin-top:14px}
+  body[data-layout=cards] .ev-body p{max-width:none;font-size:15px}
+  body[data-layout=cards] .ev-meta{grid-template-columns:1fr;gap:2px;margin-bottom:0}
+  body[data-layout=cards] .ev-meta dt{padding-top:8px}
+  body[data-layout=cards] .ev.past{opacity:.6}
+  body[data-layout=cards] .ev.next{border-color:color-mix(in srgb,var(--brass),transparent 45%)}
+  /* minimal is the one light design: --surface is a dark token, so a card tile built from it
+     puts the design's dark ink on a dark ground (measured 1.10:1). Tiles follow their design. */
+  body[data-design=minimal][data-layout=cards] .ev{background:color-mix(in srgb,var(--paper),#000 4%);
+       border-color:color-mix(in srgb,var(--ink),transparent 88%)}
+  body[data-design=minimal][data-layout=cards] .ev.next{border-color:color-mix(in srgb,var(--ink),transparent 72%)}
+
+  /* ── STACK · full-width editorial panels (Apple's story sections) ─────────── */
+  body[data-layout=stack] .timeline::before,
+  body[data-layout=stack] .timeline .prog{display:none}
+  body[data-layout=stack] .timeline{display:grid;gap:6px}
+  body[data-layout=stack] li.day{padding:34px 0 6px;font-size:12px;letter-spacing:.3em;color:var(--brass)}
+  body[data-layout=stack] li.day::after{left:0}
+  body[data-layout=stack] .ev{padding:22px 0 30px;border-bottom:1px solid color-mix(in srgb,var(--brass),transparent 86%)}
+  body[data-layout=stack] .ev:last-child{border-bottom:0}
+  body[data-layout=stack] .ev-head{grid-template-columns:auto 1fr;grid-template-rows:auto auto;gap:10px 16px;
+       padding:0;cursor:default;align-items:center}
+  body[data-layout=stack] .dot{grid-column:1;grid-row:1}
+  body[data-layout=stack] .ev-eta{grid-column:2;grid-row:1;justify-self:end;margin:0}
+  body[data-layout=stack] .ev-t{grid-column:1/-1;grid-row:2;margin-top:6px}
+  body[data-layout=stack] .ev-t h3{font-size:clamp(32px,9.5vw,46px);line-height:1.02;letter-spacing:-.01em}
+  body[data-layout=stack] .when{margin-top:10px;font-size:13.5px}
+  body[data-layout=stack] .ev-t::after{display:none}
+  body[data-layout=stack] .ev-body{padding-left:0;margin-top:18px}
+  body[data-layout=stack] .ev-body p{font-size:16px;line-height:1.6;max-width:38ch;color:var(--cream)}
+  body[data-layout=stack] .ev-meta{margin-top:18px;gap:10px 20px;grid-template-columns:auto 1fr;font-size:15px}
+  body[data-layout=stack] .ev-meta dt{padding-top:3px}
+  body[data-layout=stack] .ev.past{opacity:.55}
+
+  /* an always-open layout exposes everything; the head is no longer a control */
+  body:not([data-layout=list]) .ev-body{grid-template-rows:1fr;visibility:visible;transition:none}
+  body:not([data-layout=list]) .ev-head:hover .dot,
+  body:not([data-layout=list]) .ev-head:active .dot{transform:none}
+
+  /* surfaces */
+  .panel{background:linear-gradient(180deg,rgba(255,255,255,.035),transparent 30%),var(--surface);border:1px solid color-mix(in srgb,var(--brass),transparent 80%);border-radius:8px;padding:26px 22px;position:relative;overflow:hidden}
+  .panel h3{margin:0;font-family:var(--display);font-style:italic;font-weight:400;font-size:26px;color:var(--cream);line-height:1.1}
+  .panel p{margin:8px 0 0;font-size:15px;color:var(--cream-dim)}
+  .links{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:16px}
+  footer{margin-top:56px;text-align:center;font-size:12.5px;letter-spacing:.06em;color:var(--cream-dim);line-height:1.8}
+  footer b{font-weight:400;color:var(--brass-light)}
+
+  @media (min-width:1024px){
+    .envelope{width:520px}
+    .page{width:min(100%,560px);padding-top:56px}
+    .card{padding:60px 44px 48px}
+    .names{font-size:80px}
+    .revealed .petals span:nth-child(n+6){display:block}
+    body::before{background:radial-gradient(90% 70% at 50% 0%,color-mix(in oklab,var(--env-light),transparent 40%),transparent 60%),radial-gradient(120% 90% at 50% 110%,rgba(0,0,0,.65),transparent 60%),radial-gradient(60% 100% at 0% 50%,rgba(0,0,0,.35),transparent 60%),radial-gradient(60% 100% at 100% 50%,rgba(0,0,0,.35),transparent 60%)}
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     DESIGN 2 · ROYAL MANDALA — jaali lattice ground, a jharokha arch instead of a
+     card, a hand-built mandala that draws itself, doors that part. Cormorant + Yatra One.
+     ═══════════════════════════════════════════════════════════════════════════ */
+  [data-design=royal]{--display:"Cormorant Garamond","Cormorant",Georgia,serif;--hindi:"Yatra One","Tiro Devanagari Hindi",serif}
+  body[data-design=royal]::before{background:
+       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='rgba(255,255,255,.07)' stroke-width='1'%3E%3Cpath d='M28 2l8 18 18 8-18 8-8 18-8-18-18-8 18-8z'/%3E%3Ccircle cx='28' cy='28' r='5'/%3E%3Cpath d='M0 0l8 8M56 0l-8 8M0 56l8-8M56 56l-8-8'/%3E%3C/g%3E%3C/svg%3E") center/56px 56px,
+       radial-gradient(80% 60% at 50% 0%,color-mix(in oklab,var(--env-light),transparent 50%),transparent 70%)}
+  [data-design=royal] .petals{display:none}
+  [data-design=royal] .page{width:min(100%,480px)}
+  [data-design=royal] .card{border-radius:240px 240px 10px 10px;padding:186px 30px 44px;box-shadow:0 0 0 1px var(--brass),0 0 0 7px var(--paper),0 0 0 8px var(--brass-deep),0 50px 70px -30px rgba(0,0,0,.8)}
+  [data-design=royal] .card::before{opacity:.08}
+  [data-design=royal] .card::after{inset:12px;border-radius:230px 230px 6px 6px;border:1px solid var(--brass-deep);opacity:.7}
+  [data-design=royal] .garland,[data-design=royal] .sprig,[data-design=royal] .mono{display:none}
+  /* the card clips its overflow, so a mandala hung above the top edge only ever drew its bottom
+     third. It now sits whole inside the arch, with the card's top padding opened to receive it. */
+  [data-design=royal] .mandala{display:block;position:absolute;left:50%;top:18px;width:152px;height:152px;transform:translateX(-50%);color:var(--metal-deep);opacity:.8}
+  .mandala{display:none}
+  /* No non-scaling-stroke here: it makes the dash pattern be measured in screen pixels, which
+     defeats pathLength="1" — `stroke-dasharray:1` then means 1px dashes with 1px gaps and the
+     mandala draws itself as a broken scribble instead of solid line work. Without it, pathLength
+     normalises the dash to the whole path, so offset 1 → 0 draws each stroke on cleanly. */
+  .mandala circle,.mandala path{fill:none;stroke:currentColor;stroke-width:.9;stroke-dasharray:1;stroke-dashoffset:1}
+  .rv-royal .big .mandala circle,.rv-royal .big .mandala path{stroke-width:.55}
+  .mandala .pet{fill:var(--marigold);stroke:none;opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(0)}
+  .revealed .mandala circle,.revealed .mandala path{animation:draw 1.6s var(--ease-out) forwards}
+  .revealed .mandala .r2{animation-delay:.25s}.revealed .mandala .r3{animation-delay:.5s}.revealed .mandala .r4{animation-delay:.75s}
+  .revealed .mandala .pet{animation:petal .6s var(--spring) calc(.9s + var(--n)*40ms) forwards}
+  @keyframes petal{to{opacity:.9;transform:scale(1)}}
+  .revealed .mandala .spin{animation:spin 90s linear 2s infinite;transform-box:fill-box;transform-origin:center}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  [data-design=royal] .eyebrow{font-size:26px;color:var(--accent-ink);margin-top:6px}
+  [data-design=royal] .eyebrow small{font-family:var(--display);font-size:15px;letter-spacing:.34em;text-transform:uppercase;font-weight:600}
+  [data-design=royal] .with{font-family:var(--display);font-size:15px;letter-spacing:.12em;text-transform:none;font-style:italic;color:var(--ink-soft)}
+  [data-design=royal] .names{font-style:normal;font-weight:500;letter-spacing:.06em;text-transform:uppercase;font-size:clamp(34px,10vw,48px);line-height:1.15}
+  [data-design=royal] .names .amp{font-family:var(--hindi);font-style:normal;font-size:.7em;background:none;color:var(--accent-ink);-webkit-text-fill-color:currentColor}
+  [data-design=royal] .invite{font-family:var(--display);font-size:16px;font-style:italic;letter-spacing:0}
+  [data-design=royal] .date{font-weight:600;letter-spacing:.04em}
+  [data-design=royal] .date small{font-family:var(--display);letter-spacing:.15em;font-weight:600;text-wrap:balance}
+  [data-design=royal] .venue-line em{font-size:22px;font-weight:500}
+  [data-design=royal] .share a,[data-design=royal] .share button{font-family:var(--display);font-size:14px;letter-spacing:.08em;text-transform:none;font-style:italic}
+  [data-design=royal] .cue{font-family:var(--display);letter-spacing:.2em}
+  [data-design=royal] .label{font-family:var(--display);font-size:22px;font-style:italic;text-transform:none;letter-spacing:.02em;color:var(--brass-light)}
+  [data-design=royal] .label::after{width:9px;height:9px;transform:rotate(45deg);background:var(--brass);opacity:1;margin-top:10px}
+  [data-design=royal] .count{font-weight:600}
+  [data-design=royal] .count .num{font-size:clamp(44px,12vw,58px)}
+  [data-design=royal] .count small{font-family:var(--display);font-size:13.5px;letter-spacing:.2em;font-weight:600}
+  [data-design=royal] .timeline{--x:19px}
+  [data-design=royal] .timeline::before{width:3px;left:calc(var(--x) - 1px);background:repeating-linear-gradient(180deg,var(--brass) 0 3px,transparent 3px 9px);opacity:.55}
+  [data-design=royal] .dot{background:var(--surface);color:var(--brass-light);border-radius:0;transform:rotate(45deg);outline:1px solid var(--brass-deep);outline-offset:2px}
+  [data-design=royal] .dot .ico{transform:rotate(-45deg)}
+  [data-design=royal] .ev-head:hover .dot{transform:rotate(45deg) scale(1.08)}
+  [data-design=royal] .ev.next .dot::after{border-radius:0;inset:-6px}
+  [data-design=royal] .ev-t h3{font-style:normal;font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:19px}
+  [data-design=royal] .when{font-family:var(--display);font-size:14px;font-style:italic;letter-spacing:.04em;text-transform:none}
+  [data-design=royal] .timeline li.day{font-family:var(--display);font-size:14px;font-style:italic;letter-spacing:.08em;text-transform:none;color:var(--brass-light)}
+  [data-design=royal] .panel{border-radius:0;border:1px solid var(--brass-deep);outline:1px solid var(--brass-deep);outline-offset:4px;background:var(--surface)}
+  [data-design=royal] .panel h3{font-style:normal;font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:20px}
+  [data-design=royal] .tlink{font-style:italic;font-weight:500}
+  /* royal reveal: mandala draws on the ground, then the doors part */
+  [data-design=royal] .rv-royal{display:grid;place-items:center;position:fixed;inset:0}
+  .rv-royal .doors{position:absolute;inset:0;pointer-events:none}
+  .rv-royal .door{position:absolute;top:0;bottom:0;width:50.5%;background:var(--ground-2);transition:transform 1.1s var(--ease-in-out)}
+  .rv-royal .door.dl{left:0;border-right:2px solid var(--brass-deep);box-shadow:inset -40px 0 60px -40px rgba(0,0,0,.6)}
+  .rv-royal .door.dr{right:0;border-left:2px solid var(--brass-deep);box-shadow:inset 40px 0 60px -40px rgba(0,0,0,.6)}
+  .rv-royal .door::before{content:"";position:absolute;inset:18px;border:1px solid color-mix(in srgb,var(--brass),transparent 55%)}
+  .parting .door.dl{transform:translateX(-102%)}
+  .parting .door.dr{transform:translateX(102%)}
+  .rv-royal .big{position:relative;width:min(78vw,340px);height:min(78vw,340px);color:var(--metal);cursor:pointer;background:none;border:0;padding:0;transition:transform .3s var(--ease-out)}
+  .rv-royal .big:hover{transform:scale(1.03)}
+  .rv-royal .big .mandala{display:block;position:static;width:100%;height:100%;transform:none;opacity:1}
+  .rv-royal .big .mandala circle,.rv-royal .big .mandala path{animation:draw 2.2s var(--ease-out) forwards}
+  .rv-royal .big .mandala .r2{animation-delay:.3s}.rv-royal .big .mandala .r3{animation-delay:.6s}.rv-royal .big .mandala .r4{animation-delay:.9s}
+  .rv-royal .big .mandala .pet{animation:petal .6s var(--spring) calc(1.1s + var(--n)*40ms) forwards}
+  .rv-royal .big .mandala .spin{animation:spin 60s linear infinite;transform-box:fill-box;transform-origin:center}
+  .rv-royal .big .word{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--hindi);font-size:clamp(26px,8vw,38px);color:var(--cream);text-shadow:0 2px 20px rgba(0,0,0,.6)}
+  .parting .big{animation:sink2 .9s var(--ease-in-out) forwards}
+  @keyframes sink2{to{transform:scale(.6);opacity:0}}
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     DESIGN 3 · CINEMATIC — the trailer the Indian market ships as MP4, done as a page:
+     near-black, letterboxed, animated grain, an anamorphic streak, Cinzel caps.
+     ═══════════════════════════════════════════════════════════════════════════ */
+  [data-design=film]{--display:"Cinzel","Trajan Pro",Georgia,serif;--serif2:"Cormorant Garamond",Georgia,serif}
+  body[data-design=film]{background:color-mix(in oklab,var(--ground),black 60%)}
+  body[data-design=film]::before{background:radial-gradient(70% 50% at 50% 30%,color-mix(in oklab,var(--env),transparent 55%),transparent 70%),radial-gradient(120% 100% at 50% 50%,transparent 40%,rgba(0,0,0,.75) 100%)}
+  .grain,.bars,.streak{display:none}
+  [data-design=film] .grain{display:block;position:fixed;inset:-50%;width:200%;height:200%;background-image:var(--grain);opacity:.09;pointer-events:none;z-index:3;animation:grain .5s steps(4) infinite}
+  @keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(-3%,2%)}50%{transform:translate(2%,-3%)}75%{transform:translate(-1%,-2%)}100%{transform:translate(3%,1%)}}
+  [data-design=film] .bars{display:block;position:fixed;left:0;right:0;height:7vh;background:#000;z-index:4;pointer-events:none}
+  [data-design=film] .bars.t{top:0}[data-design=film] .bars.b{bottom:0}
+  [data-design=film] .streak{display:block;position:fixed;left:-40%;top:38%;width:180%;height:2px;background:linear-gradient(90deg,transparent,var(--brass-light) 40%,#fff 50%,var(--brass-light) 60%,transparent);filter:blur(1.5px);opacity:0;pointer-events:none;z-index:3;animation:streak 9s ease-in-out 3s infinite}
+  @keyframes streak{0%,70%{opacity:0;transform:translateX(-30%)}80%{opacity:.7}100%{opacity:0;transform:translateX(30%)}}
+  [data-design=film] .petals{display:none}
+  [data-design=film] .page{width:min(100%,520px);padding-top:12vh}
+  [data-design=film] .card{background:transparent;color:var(--cream);box-shadow:none;padding:30px 12px 10px;overflow:visible}
+  [data-design=film] .card::before,[data-design=film] .card::after,[data-design=film] .garland,[data-design=film] .sprig,[data-design=film] .mono{display:none}
+  [data-design=film] .eyebrow{font-family:var(--hindi);color:var(--brass-light);font-size:18px}
+  [data-design=film] .eyebrow small{font-family:var(--display);letter-spacing:.5em;color:var(--cream-dim);font-size:12px}
+  [data-design=film] .with{font-family:var(--serif2);font-style:italic;font-size:17px;letter-spacing:.04em;text-transform:none;color:var(--cream-dim);margin-top:34px}
+  [data-design=film] .names{font-style:normal;font-weight:400;text-transform:uppercase;letter-spacing:.14em;font-size:clamp(34px,10.5vw,54px);line-height:1.2;color:var(--cream);text-shadow:0 0 40px color-mix(in srgb,var(--brass),transparent 60%)}
+  [data-design=film] .names .amp{font-family:var(--serif2);font-style:italic;font-size:.9em;text-transform:none;background:none;color:var(--brass);-webkit-text-fill-color:currentColor}
+  [data-design=film] .invite{font-family:var(--serif2);font-style:italic;font-size:17px;color:var(--cream-dim);letter-spacing:0;margin-top:26px}
+  [data-design=film] .date{color:var(--cream);letter-spacing:.2em;font-weight:400;font-size:clamp(26px,7.5vw,36px);margin-top:36px}
+  [data-design=film] .date small{font-family:var(--display);letter-spacing:.4em;font-size:12px;color:var(--brass-light)}
+  [data-design=film] .venue-line{color:var(--cream-dim)}
+  [data-design=film] .venue-line em{font-family:var(--serif2);font-size:22px;color:var(--cream)}
+  [data-design=film] .share{margin-top:30px}
+  [data-design=film] .share a,[data-design=film] .share button{color:var(--cream-dim);text-decoration-color:var(--brass-deep);font-family:var(--display);font-size:12px;letter-spacing:.3em}
+  [data-design=film] .cue{color:var(--cream-dim);font-family:var(--display);font-size:12px;letter-spacing:.4em}
+  [data-design=film] .label{font-size:12px;letter-spacing:.5em;color:var(--brass-light)}
+  [data-design=film] .label::after{width:80px;background:linear-gradient(90deg,transparent,var(--brass),transparent)}
+  [data-design=film] .count{font-weight:400;letter-spacing:.06em}
+  [data-design=film] .count .num{font-size:clamp(36px,10vw,48px)}
+  [data-design=film] .count .sep{color:var(--brass-deep)}
+  [data-design=film] .count small{font-family:var(--display);font-size:12px;letter-spacing:.26em}
+  [data-design=film] .timeline{--x:20px}
+  [data-design=film] .timeline::before{width:12px;left:calc(var(--x) - 6px);background:repeating-linear-gradient(180deg,color-mix(in srgb,var(--brass-deep),transparent 30%) 0 7px,transparent 7px 15px);opacity:.6}
+  [data-design=film] .timeline .prog{left:calc(var(--x) - 1px)}
+  [data-design=film] .dot{border-radius:3px;background:color-mix(in oklab,var(--ground),black 60%);outline:1px solid var(--brass-deep);color:var(--brass-light)}
+  [data-design=film] .ev.next .dot::after{border-radius:3px;inset:-5px}
+  [data-design=film] .ev-t h3{font-style:normal;text-transform:uppercase;letter-spacing:.12em;font-size:17px;font-weight:400}
+  [data-design=film] .when{font-family:var(--serif2);font-style:italic;font-size:14px;letter-spacing:.02em;text-transform:none}
+  [data-design=film] .timeline li.day{font-family:var(--display);letter-spacing:.4em;font-size:12px}
+  [data-design=film] .ev-body p{font-family:var(--serif2);font-size:16px;font-style:italic}
+  [data-design=film] .panel{background:transparent;border:0;border-top:1px solid var(--brass-deep);border-bottom:1px solid var(--brass-deep);border-radius:0;padding:26px 8px}
+  [data-design=film] .panel h3{font-style:normal;text-transform:uppercase;letter-spacing:.14em;font-size:18px;font-weight:400}
+  [data-design=film] .tlink{font-family:var(--serif2);font-size:18px}
+  [data-design=film] footer{padding-bottom:8vh}
+  /* film reveal: title cards, slow push-in, one hard cut */
+  [data-design=film] .rv-film{display:grid;place-items:center;position:fixed;inset:0;background:#000;text-align:center}
+  .rv-film .tc{position:absolute;inset:0;display:grid;place-items:center;padding:24px;opacity:0}
+  .rv-film .tc1{font-family:var(--serif2);font-style:italic;font-size:clamp(20px,5.5vw,30px);color:var(--cream-dim);letter-spacing:.04em}
+  .rv-film .tc2{font-family:var(--display);font-size:clamp(28px,9vw,58px);letter-spacing:.2em;color:var(--cream);text-transform:uppercase;line-height:1.3}
+  .rv-film .tc2 span{display:block;font-family:var(--serif2);font-style:italic;text-transform:none;letter-spacing:0;color:var(--brass);font-size:.75em}
+  .rolling .tc1{animation:tcard 2.2s ease-in-out forwards}
+  .rolling .tc2{animation:tcard2 3.2s ease-out 1.9s forwards}
+  @keyframes tcard{0%{opacity:0;transform:scale(1.04)}25%,70%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.98)}}
+  @keyframes tcard2{0%{opacity:0;transform:scale(1.12);letter-spacing:.32em}30%{opacity:1}85%{opacity:1;transform:scale(1);letter-spacing:.2em}100%{opacity:0}}
+  .rv-film .play{position:relative;width:88px;height:88px;border-radius:50%;border:1px solid var(--metal);background:none;color:var(--metal-light);cursor:pointer;display:grid;place-items:center;transition:transform .3s var(--ease-out),opacity .3s}
+  .rv-film .play::before{content:"";position:absolute;inset:-14px;border-radius:50%;border:1px solid color-mix(in srgb,var(--brass),transparent 60%);animation:ring 3s ease-in-out infinite}
+  .rv-film .play:hover{transform:scale(1.06)}
+  .rolling .play,.rolling .hint,.rolling .skip{opacity:0;pointer-events:none}
+  .rv-film .cut{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none}
+  .cutting .cut{animation:cut .35s steps(2) forwards}
+  @keyframes cut{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     DESIGN 4 · MINIMAL — paper page, one family (Manrope), lowercase names, a huge
+     thin date, a dot grid, left-aligned; the only ornament is one marigold dot.
+     ═══════════════════════════════════════════════════════════════════════════ */
+  [data-design=minimal]{--display:"Manrope","Helvetica Neue",Arial,sans-serif;--sans:"Manrope","Helvetica Neue",Arial,sans-serif;
+       --cream:var(--ink);--cream-dim:color-mix(in srgb,var(--ink),transparent 40%);--brass-light:var(--ink-soft);--line:color-mix(in srgb,var(--ink),transparent 82%)}
+  body[data-design=minimal]{background:var(--paper);color:var(--ink);font-weight:400}
+  body[data-design=minimal]::before{background:radial-gradient(circle,color-mix(in srgb,var(--ink),transparent 86%) 1px,transparent 1.2px) 0 0/22px 22px;opacity:.9}
+  [data-design=minimal] .petals{display:none}
+  [data-design=minimal] .page{width:min(100%,520px);padding:clamp(40px,8vw,90px) 24px 80px}
+  [data-design=minimal] .card{background:transparent;color:var(--ink);box-shadow:none;border-radius:0;padding:0;text-align:left;overflow:visible}
+  [data-design=minimal] .card::before,[data-design=minimal] .card::after,[data-design=minimal] .garland,[data-design=minimal] .sprig,[data-design=minimal] .mono{display:none}
+  [data-design=minimal] .eyebrow{font-family:var(--hindi);font-size:15px;color:var(--ink-soft);display:flex;align-items:center;gap:10px}
+  [data-design=minimal] .eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--marigold);flex:none}
+  [data-design=minimal] .eyebrow small{display:inline;margin:0;letter-spacing:.04em;text-transform:none;font-size:15px;color:var(--ink-soft)}
+  [data-design=minimal] .with{text-transform:none;letter-spacing:0;font-size:14px;margin:48px 0 8px;color:var(--ink-soft)}
+  [data-design=minimal] .names{font-style:normal;font-weight:300;text-transform:lowercase;letter-spacing:-.02em;font-size:clamp(40px,11vw,56px);line-height:1.05;text-wrap:pretty}
+  [data-design=minimal] .names .name{display:inline}
+  [data-design=minimal] .names .amp{display:inline;font-size:1em;margin:0 .12em;background:none;color:var(--accent-ink);-webkit-text-fill-color:currentColor;font-weight:300}
+  [data-design=minimal] .invite{font-size:14px;letter-spacing:0;color:var(--ink-soft);margin-top:14px}
+  [data-design=minimal] .date{font-weight:300;font-size:clamp(60px,20vw,104px);letter-spacing:-.04em;line-height:.95;margin-top:44px;font-variant-numeric:tabular-nums}
+  [data-design=minimal] .date .l{display:inline-block}
+  [data-design=minimal] .date small{letter-spacing:0;text-transform:none;font-size:14px;color:var(--ink-soft);margin-top:14px;font-weight:400}
+  [data-design=minimal] .venue-line{font-size:14px;color:var(--ink-soft);margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+  [data-design=minimal] .venue-line em{font-style:normal;font-weight:600;font-size:16px;color:var(--ink)}
+  [data-design=minimal] .share{justify-content:flex-start;text-transform:none;letter-spacing:0;font-size:15px;margin-top:22px}
+  [data-design=minimal] .share a,[data-design=minimal] .share button{text-decoration-color:var(--marigold);color:var(--ink)}
+  [data-design=minimal] .cue{text-transform:none;letter-spacing:0;font-size:13.5px;color:var(--ink-soft);margin-top:40px}
+  [data-design=minimal] .cue svg{margin:8px 0 0}
+  [data-design=minimal] section.block{margin-top:56px}
+  [data-design=minimal] .label{text-align:left;text-transform:none;letter-spacing:0;font-size:15px;color:var(--ink-soft);font-weight:400;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+  [data-design=minimal] .label::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--marigold);flex:none}
+  [data-design=minimal] .label::after{display:none}
+  [data-design=minimal] .count{justify-content:flex-start;gap:14px;font-weight:300;color:var(--ink)}
+  [data-design=minimal] .count .unit{justify-items:start}
+  [data-design=minimal] .count .num{font-size:clamp(36px,10vw,52px);letter-spacing:-.03em}
+  [data-design=minimal] .count .sep{display:none}
+  [data-design=minimal] .count small{letter-spacing:0;text-transform:none;font-size:13.5px;color:var(--ink-soft)}
+  [data-design=minimal] .count-note{text-align:left;color:var(--ink-soft)}
+  [data-design=minimal] .timeline{--x:6px;padding:0}
+  [data-design=minimal] .timeline::before{background:var(--line);left:var(--x)}
+  [data-design=minimal] .timeline .prog{background:var(--ink);box-shadow:none;width:1px;left:var(--x)}
+  [data-design=minimal] .timeline .prog::after{background:var(--marigold);box-shadow:none;width:7px;height:7px}
+  [data-design=minimal] .timeline li.day{padding-left:28px;text-transform:none;letter-spacing:0;font-size:15px;color:var(--ink);font-weight:600}
+  [data-design=minimal] .timeline li.day::after{left:28px;background:var(--line)}
+  [data-design=minimal] .ev-head{grid-template-columns:14px 1fr auto;gap:14px;padding:12px 0 12px 0}
+  [data-design=minimal] .dot{width:13px;height:13px;margin-top:5px;background:var(--paper);border:1px solid var(--ink);color:var(--ink);border-radius:50%}
+  [data-design=minimal] .dot .ico{display:none}
+  [data-design=minimal] .ev.next .dot{background:var(--marigold);border-color:var(--marigold)}
+  [data-design=minimal] .ev.next .dot::after{border-color:var(--marigold)}
+  [data-design=minimal] .ev-t h3{font-style:normal;font-weight:600;font-size:17px;color:var(--ink)}
+  [data-design=minimal] .when{text-transform:none;letter-spacing:0;font-size:15px;color:var(--ink-soft)}
+  [data-design=minimal] .when span+span::before{color:var(--ink-soft)}
+  [data-design=minimal] .ev-eta{color:var(--ink);text-transform:none;letter-spacing:0;background:color-mix(in srgb,var(--ink),transparent 92%);border-color:color-mix(in srgb,var(--ink),transparent 78%)}
+  [data-design=minimal] .ev-body{padding-left:28px}
+  [data-design=minimal] .ev-body p,[data-design=minimal] .ev-meta dd{color:var(--ink)}
+  [data-design=minimal] .ev-meta dt{color:var(--ink-soft);text-transform:none;letter-spacing:0;font-size:13.5px}
+  [data-design=minimal] .ev-t::after{background:var(--marigold)}
+  [data-design=minimal] .panel{background:transparent;border:1px solid var(--line);border-radius:0;padding:22px 0 0;border-width:1px 0 0}
+  [data-design=minimal] .panel h3{font-style:normal;font-weight:600;font-size:17px;color:var(--ink)}
+  [data-design=minimal] .panel p{color:var(--ink-soft)}
+  [data-design=minimal] .tlink{font-style:normal;font-size:14px;color:var(--ink);text-decoration-color:var(--marigold)}
+  [data-design=minimal] footer{text-align:left;color:var(--ink-soft);border-top:1px solid var(--line);padding-top:18px}
+  [data-design=minimal] footer b{color:var(--ink)}
+  [data-design=minimal] .toast{background:var(--ink);color:var(--paper)}
+  [data-design=minimal] .stage .hint{color:var(--ink-soft)}
+  [data-design=minimal] .stage .hint b{color:var(--ink)}
+  [data-design=minimal] .skip{color:var(--ink-soft)}
+  /* minimal reveal: one hairline draws across the paper, the dot travels it, the page is simply there */
+  [data-design=minimal] .rv-min{display:grid;place-items:center;width:100%}
+  .rv-min .track{position:relative;width:min(70vw,320px);height:1px;background:var(--line)}
+  .rv-min .track i{position:absolute;left:0;top:0;height:100%;width:0;background:var(--ink)}
+  .rv-min .track b{position:absolute;left:0;top:50%;width:9px;height:9px;border-radius:50%;background:var(--marigold);transform:translate(-50%,-50%)}
+  .rv-min .open{margin-top:26px;background:none;border:1px solid var(--ink);color:var(--ink);border-radius:999px;padding:12px 26px;font-size:15px;cursor:pointer;transition:background .25s,color .25s}
+  .rv-min .open:hover{background:var(--ink);color:var(--paper)}
+  .drawing .track i{animation:line 1s var(--ease-in-out) forwards}
+  .drawing .track b{animation:travel 1s var(--ease-in-out) forwards}
+  .drawing .open{opacity:0;transition:opacity .3s}
+  @keyframes line{to{width:100%}}
+  @keyframes travel{to{left:100%}}
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     DESIGN 5 · KINETIC POSTER — condensed caps that move, a marquee, hard edges,
+     numerals as the picture. Bebas Neue against Bodoni italic.
+     ═══════════════════════════════════════════════════════════════════════════ */
+  [data-design=kinetic]{--display:"Bebas Neue","Oswald","Arial Narrow",sans-serif;--serif2:"Bodoni Moda","Didot",Georgia,serif}
+  body[data-design=kinetic]::before{background:repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.035) 22px 24px),radial-gradient(90% 60% at 50% 100%,rgba(0,0,0,.5),transparent 60%)}
+  [data-design=kinetic] .petals{display:none}
+  .marquee{display:none}
+  [data-design=kinetic].revealed .marquee{display:flex;position:fixed;left:0;right:0;top:0;z-index:3;overflow:hidden;background:var(--marigold);color:var(--ground);font-family:var(--display);font-size:22px;letter-spacing:.06em;line-height:1;padding:8px 0;white-space:nowrap;pointer-events:none}
+  .marquee span{display:inline-block;padding-right:40px;animation:marq 22s linear infinite}
+  .marquee span i{font-family:var(--serif2);font-style:italic;font-size:.9em;text-transform:none;letter-spacing:0;margin:0 14px}
+  @keyframes marq{to{transform:translateX(-100%)}}
+  [data-design=kinetic] .page{width:min(100%,500px);padding-top:76px}
+  [data-design=kinetic] .card{border-radius:0;padding:34px 26px 30px;text-align:left;box-shadow:0 0 0 4px var(--brass),14px 14px 0 0 var(--marigold-deep)}
+  [data-design=kinetic] .card::before,[data-design=kinetic] .garland,[data-design=kinetic] .sprig,[data-design=kinetic] .mono{display:none}
+  [data-design=kinetic] .card::after{display:none}
+  [data-design=kinetic] .eyebrow{font-family:var(--display);font-size:22px;letter-spacing:.08em;color:var(--accent-ink);display:flex;align-items:baseline;gap:12px}
+  [data-design=kinetic] .eyebrow span[lang]{font-family:var(--hindi);font-size:18px}
+  [data-design=kinetic] .eyebrow small{display:inline;margin:0;font-family:var(--display);font-size:18px;letter-spacing:.1em;color:var(--ink-soft)}
+  [data-design=kinetic] .with{font-family:var(--serif2);font-style:italic;text-transform:none;letter-spacing:0;font-size:16px;margin:26px 0 0;color:var(--ink-soft)}
+  [data-design=kinetic] .names{font-style:normal;font-weight:400;text-transform:uppercase;letter-spacing:.01em;font-size:clamp(84px,25vw,132px);line-height:.86;margin-top:6px;text-wrap:initial}
+  [data-design=kinetic] .names .name{display:block}
+  [data-design=kinetic] .names .amp{display:inline-block;font-family:var(--serif2);font-style:italic;font-size:.55em;line-height:.9;margin:0 0 0 .2em;background:none;color:var(--marigold);-webkit-text-fill-color:currentColor;text-transform:none;position:relative;top:-.1em}
+  [data-design=kinetic] .l{transform:translateY(.6em) skewX(-6deg)}
+  [data-design=kinetic] .invite{font-family:var(--serif2);font-style:italic;font-size:17px;letter-spacing:0;margin-top:22px}
+  [data-design=kinetic] .date{font-size:clamp(44px,14vw,92px);font-weight:400;line-height:.9;letter-spacing:0;margin-top:26px;color:var(--paper);background:var(--ink);display:inline-block;padding:12px 14px 6px;white-space:nowrap;max-width:100%}
+  [data-design=kinetic] .date small{font-family:var(--sans);color:var(--paper);letter-spacing:.2em;font-size:12.5px;margin-top:8px}
+  [data-design=kinetic] .venue-line{font-size:15px;margin-top:22px}
+  [data-design=kinetic] .venue-line em{font-family:var(--display);font-style:normal;font-size:30px;letter-spacing:.03em;line-height:1}
+  [data-design=kinetic] .share{justify-content:flex-start;font-family:var(--display);font-size:15px;letter-spacing:.08em;margin-top:26px}
+  [data-design=kinetic] .cue{font-family:var(--display);font-size:15px;letter-spacing:.1em;text-align:left;margin-top:26px}
+  [data-design=kinetic] .cue svg{margin:6px 0 0}
+  [data-design=kinetic] .label{font-family:var(--display);font-size:34px;letter-spacing:.04em;text-align:left;color:var(--cream);margin-bottom:10px;line-height:1}
+  [data-design=kinetic] .label::after{margin:8px 0 0;width:60px;height:4px;background:var(--marigold);opacity:1}
+  [data-design=kinetic] .count{justify-content:flex-start;gap:10px;font-weight:400}
+  [data-design=kinetic] .count .num{font-size:clamp(64px,19vw,92px);letter-spacing:.02em}
+  [data-design=kinetic] .count .sep{font-size:clamp(64px,19vw,92px);color:var(--marigold);opacity:1}
+  [data-design=kinetic] .count small{font-size:12.5px;letter-spacing:.2em}
+  [data-design=kinetic] .count-note{text-align:left}
+  [data-design=kinetic] .timeline{--x:19px}
+  [data-design=kinetic] .timeline::before{width:4px;left:calc(var(--x) - 2px);background:var(--brass-deep);opacity:.5}
+  [data-design=kinetic] .timeline .prog{width:4px;left:calc(var(--x) - 2px);background:var(--marigold);box-shadow:none;border-radius:0}
+  [data-design=kinetic] .timeline .prog::after{background:var(--marigold);box-shadow:none;border-radius:0;width:12px;height:12px}
+  [data-design=kinetic] .timeline li.day{font-family:var(--display);font-size:20px;letter-spacing:.06em;color:var(--marigold-light)}
+  [data-design=kinetic] .dot{border-radius:0;background:var(--paper);color:var(--ink);outline:2px solid var(--ink)}
+  [data-design=kinetic] .ev.next .dot::after{border-radius:0;border:2px solid var(--marigold);inset:-7px}
+  [data-design=kinetic] .ev-t h3{font-style:normal;font-size:38px;letter-spacing:.03em;line-height:.95;font-weight:400}
+  [data-design=kinetic] .when span:first-child{font-family:var(--display);font-size:22px;letter-spacing:.06em;color:var(--marigold-light);line-height:1}
+  [data-design=kinetic] .when{align-items:baseline;font-family:var(--serif2);font-style:italic;text-transform:none;letter-spacing:0;font-size:14px}
+  [data-design=kinetic] .ev-eta{font-family:var(--display);font-size:14px;letter-spacing:.08em;border-radius:0;padding:5px 9px 3px}
+  [data-design=kinetic] .ev-t::after{height:4px;background:var(--marigold)}
+  [data-design=kinetic] .ev-body p{font-family:var(--serif2);font-style:italic;font-size:16px}
+  [data-design=kinetic] .ev-meta dt{font-family:var(--display);font-size:14px;letter-spacing:.08em;color:var(--marigold-light)}
+  [data-design=kinetic] .panel{border-radius:0;background:var(--paper);color:var(--ink);border:0;box-shadow:0 0 0 4px var(--brass);padding:26px}
+  [data-design=kinetic] .panel h3{font-style:normal;font-size:40px;letter-spacing:.03em;color:var(--ink);line-height:.95}
+  [data-design=kinetic] .panel p{color:var(--ink-soft)}
+  [data-design=kinetic] .tlink{font-family:var(--display);font-style:normal;font-size:20px;letter-spacing:.06em;color:var(--accent-ink);text-decoration-color:var(--marigold-deep)}
+  [data-design=kinetic] footer{font-family:var(--display);font-size:15px;letter-spacing:.06em;text-align:left}
+  /* kinetic reveal: the three words slam in as the page loads (the rest state is the poster line); tapping wipes a bar across and the invitation is behind it */
+  [data-design=kinetic] .rv-kin{display:grid;justify-items:start;width:min(88vw,420px)}
+  .rv-kin .w{display:block;font-family:var(--display);font-size:clamp(88px,26vw,150px);line-height:.84;color:var(--cream);opacity:0;transform:translateY(-60px) skewX(-8deg)}
+  .rv-kin .w.d{color:var(--marigold)}
+  .rv-kin .open{margin-top:26px;font-family:var(--display);font-size:24px;letter-spacing:.1em;background:var(--marigold);color:var(--ground);border:0;padding:10px 26px 8px;cursor:pointer;transition:transform .15s var(--spring)}
+  .rv-kin .open:hover{transform:scale(1.05)}
+  .rv-kin .open:active{transform:scale(.96)}
+  .rv-kin .w:nth-child(1){animation:slam .55s var(--spring) .05s forwards}
+  .rv-kin .w:nth-child(2){animation:slam .55s var(--spring) .3s forwards}
+  .rv-kin .w:nth-child(3){animation:slam .55s var(--spring) .55s forwards}
+  .wipe .open{opacity:0;pointer-events:none;transition:opacity .2s}
+  @keyframes slam{to{opacity:1;transform:none}}
+  .rv-kin .bar{position:fixed;left:0;right:0;top:0;bottom:0;background:var(--marigold);transform:scaleX(0);transform-origin:left;pointer-events:none}
+  .wipe .bar{animation:wipe .7s var(--ease-in-out) forwards}
+  @keyframes wipe{0%{transform:scaleX(0);transform-origin:left}50%{transform:scaleX(1);transform-origin:left}51%{transform-origin:right}100%{transform:scaleX(0);transform-origin:right}}
+
+  /* ── tap targets ────────────────────────────────────────────────────────────
+     Text links sat at 23–28px tall. Padding lifts every control to 44px of hit area
+     while the text itself stays exactly where it was laid out. */
+  .share a,.share button{display:inline-flex;align-items:center;min-height:44px;padding:0 2px}
+  .tlink{display:inline-flex;align-items:center;min-height:44px}
+  .links{gap:0 26px}
+  .mute{width:46px;height:46px}
+  /* a visible, high-contrast focus ring on every control, in both light and dark designs */
+  :focus-visible{outline:3px solid var(--brass-light);outline-offset:3px;border-radius:4px}
+  [data-design=minimal] :focus-visible{outline-color:var(--ink)}
+
+  /* ── RESPONSIVE PASS — deliberately last ───────────────────────────────────
+     Design blocks use [data-design=x] selectors, which outrank a bare class no matter
+     what a media query says; putting this pass after them lets it win on order. Layout
+     rules (body[data-layout=x]) still outrank it, which is what we want. */
+  /* ── event details: room to read, on both sizes ──────────────────────────────
+     The details are the reading matter of the page, and they were living in a 460px
+     column with a 54px indent — roughly a third of a phone's width spent on gutter. */
+  @media (max-width:560px){
+    /* reclaim the gutter, but not all of it: the rail sits at --x (19px) and the icon column is
+       40px wide, so prose at 0 runs straight through both. 40px clears them and still buys width. */
+    body[data-design] .ev-body{padding-left:40px}
+    .ev-body p{max-width:none}
+    .ev-meta{gap:5px 12px}
+    .ev-head{gap:12px}
+  }
+  @media (min-width:900px){
+    /* the celebration breaks out of the card column: it is a schedule, not a stanza */
+    #evSec{--w:min(calc(100vw - 56px),880px);width:var(--w);margin-inline:calc((100% - var(--w))/2)}
+    #evSec .timeline{--x:23px}
+    /* at 1040px wide an `auto` end column throws the countdown pill against the far edge,
+       700px from the event it belongs to. Third column takes the slack instead, so the pill
+       sits beside its title. */
+    body[data-design] .ev-head{grid-template-columns:48px auto 1fr;gap:20px;padding:16px 0;align-items:center}
+    body[data-design] .ev-eta{justify-self:start;align-self:center;margin-top:0}
+    .dot{width:48px;height:48px}
+    .dot .ico{width:32px;height:32px}
+    /* every design sets its own heading, so a bare .ev-t h3 here would lose to [data-design=x]
+       no matter where it sits. Each is scaled in its own voice instead of flattened to one size. */
+    body[data-design=letterpress] .ev-t h3{font-size:30px}
+    body[data-design=royal] .ev-t h3{font-size:23px}
+    body[data-design=film] .ev-t h3{font-size:21px}
+    body[data-design=minimal] .ev-t h3{font-size:21px}
+    body[data-design=kinetic] .ev-t h3{font-size:44px}
+    body[data-design] .when{font-size:15px}
+    body[data-design=royal] .when,body[data-design=film] .when,body[data-design=kinetic] .when{font-size:15px}
+    .ev-body{padding-left:68px}
+    /* description and the practicalities side by side instead of stacked */
+    .ev-body>div{display:grid;grid-template-columns:1.05fr .95fr;gap:8px 40px;align-items:start}
+    .ev-body p{max-width:46ch;font-size:15px;line-height:1.6;margin:0 0 6px}
+    .ev-meta{margin:0;font-size:15px;gap:8px 18px;align-content:start}
+    .ev-meta dt{font-size:12.5px}
+    body[data-design] .timeline li.day{padding-left:68px}
+    body[data-design] .timeline li.day::after{left:68px}
+    body[data-design=letterpress] .timeline li.day{font-size:13.5px}
+    body[data-design=royal] .timeline li.day{font-size:16px}
+  }
+  @media (min-width:1280px){
+    #evSec{--w:min(calc(100vw - 80px),1040px)}
+    .ev-body>div{gap:8px 56px}
+    body[data-design=letterpress] .ev-t h3{font-size:34px}
+    body[data-design=royal] .ev-t h3{font-size:25px}
+    body[data-design=kinetic] .ev-t h3{font-size:50px}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    .petals,.grain,.streak{display:none}
+    .l,.anim,.garland,.sprig,.names .amp,.mandala *,.rv-kin .w{animation:none!important;opacity:1;transform:none}
+    .mandala circle,.mandala path{stroke-dashoffset:0}
+    .names .amp{background-position:0 0}
+    .cue svg,.seal-in,.garland .sw,.ev.next .dot::after,.marquee span,.rv-film .play::before{animation:none}
+    section.block,.timeline li,.timeline::before,.when span{opacity:1;transform:none;transition:none}
+    .ico path,.ico circle,.ico line{stroke-dashoffset:0;animation:none!important}
+    .ico .f{opacity:.85}
+  }
+</style>
+<style>
+  .stage-inner{position:relative}
+  .stage .hint,.stage .skip{position:relative;z-index:6}
+  .rv-royal .doors{z-index:0}.rv-royal .big{z-index:1}
+  /* reveals that cover the viewport (royal, film): the hint and skip sit above the bottom edge, not on the grid centre */
+  [data-design=royal] .stage .hint,[data-design=film] .stage .hint{position:fixed;left:0;right:0;bottom:118px;z-index:6}
+  [data-design=royal] .stage .skip,[data-design=film] .stage .skip{position:fixed;left:50%;transform:translateX(-50%);bottom:86px;z-index:6;margin:0}
+  @media (min-width:521px){ [data-design=royal] .stage .hint,[data-design=film] .stage .hint{bottom:78px} [data-design=royal] .stage .skip,[data-design=film] .stage .skip{bottom:46px} }
+
+  /* ── desktop widths, last in the sheet on purpose ──────────────────────────
+     Each design sets its own `.page` width later in this stylesheet, and those
+     selectors ([data-design=x] .page) tie with anything written inside the
+     ≥1024px block above — a media query adds no specificity, so source order
+     decides and the design rule wins. Measured at 1280 before this block:
+     letterpress 560 (correct, it has no design rule) but royal 480, film 520,
+     minimal 520, kinetic 500 — the desktop bump silently did nothing for four
+     of five designs. Overriding here, after them, is what actually applies. */
+  @media (min-width:1024px){
+    [data-design=royal] .page{width:min(100%,580px)}
+    [data-design=film] .page{width:min(100%,620px)}
+    [data-design=minimal] .page{width:min(100%,620px)}
+    [data-design=kinetic] .page{width:min(100%,600px)}
+  }
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- original marigold: three petal rings from one rotated circle each; colours come from the palette tokens -->
+    <symbol id="marigold" viewBox="-50 -50 100 100">
+      <g fill="var(--marigold-deep)"><circle id="p1" cy="-33" r="13"/><use href="#p1" transform="rotate(45)"/><use href="#p1" transform="rotate(90)"/><use href="#p1" transform="rotate(135)"/><use href="#p1" transform="rotate(180)"/><use href="#p1" transform="rotate(225)"/><use href="#p1" transform="rotate(270)"/><use href="#p1" transform="rotate(315)"/></g>
+      <g fill="var(--marigold)" transform="rotate(22.5)"><circle id="p2" cy="-23" r="12"/><use href="#p2" transform="rotate(45)"/><use href="#p2" transform="rotate(90)"/><use href="#p2" transform="rotate(135)"/><use href="#p2" transform="rotate(180)"/><use href="#p2" transform="rotate(225)"/><use href="#p2" transform="rotate(270)"/><use href="#p2" transform="rotate(315)"/></g>
+      <g fill="var(--marigold-light)"><circle id="p3" cy="-13" r="10"/><use href="#p3" transform="rotate(45)"/><use href="#p3" transform="rotate(90)"/><use href="#p3" transform="rotate(135)"/><use href="#p3" transform="rotate(180)"/><use href="#p3" transform="rotate(225)"/><use href="#p3" transform="rotate(270)"/><use href="#p3" transform="rotate(315)"/></g>
+      <circle r="7" fill="var(--marigold-deep)"/>
+    </symbol>
+    <symbol id="leaf" viewBox="0 0 60 24"><path d="M2 12C14 0 40 -2 58 12 40 26 14 24 2 12Z" fill="var(--leaf)"/><path d="M4 12H54" stroke="var(--leaf-deep)" stroke-width="1.2"/></symbol>
+    <symbol id="seal" viewBox="0 0 100 100">
+      <path d="M50 3c7 0 10 5 17 6s13 3 17 9 2 13 4 20-1 14-5 20-10 8-17 11-12 4-19 3-13-4-19-8-8-11-10-18 0-13 2-20 6-10 12-13 11-9 18-10z" fill="var(--metal-deep)"/>
+      <path d="M50 8c6 0 9 4 15 5s12 3 15 8 2 12 3 18-1 12-4 17-9 7-15 10-11 3-17 2-11-3-16-7-7-10-9-16 0-12 2-18 5-9 10-12 10-8 16-7z" fill="var(--metal)"/>
+      <path d="M34 24c6-6 14-9 22-8" stroke="var(--metal-light)" stroke-width="2" fill="none" stroke-linecap="round" opacity=".7"/><path d="M62 18c2 1 4 2 5 4" stroke="var(--metal-light)" stroke-width="2" fill="none" stroke-linecap="round" opacity=".5"/>
+      <text x="50" y="59" text-anchor="middle" font-family="Bodoni Moda,Didot,Georgia,serif" font-style="italic" font-size="26" letter-spacing="1" fill="var(--seal-core)">M·A</text>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="ctl" role="group" aria-label="Review controls">
+  <label><span>Design</span><select id="design" aria-label="Design">
+    <option value="letterpress">Letterpress</option><option value="royal">Royal mandala</option><option value="film">Cinematic</option><option value="minimal">Minimal</option><option value="kinetic">Kinetic poster</option>
+  </select></label>
+  <label><i class="sw" aria-hidden="true"></i><span>Theme colour</span><select id="palette" aria-label="Theme colour">
+    <option value="emerald">Emerald · house</option><option value="demon">Demon Slayer · cat-prep</option><option value="amber">Mango Amber</option><option value="orchard">Orchard</option><option value="coastal">Coastal</option><option value="plum">Plum</option><option value="slate">Slate</option>
+  </select></label>
+  <label><span>Event layout</span><select id="layout" aria-label="Event layout">
+    <option value="list">Timeline · tap to open</option><option value="cards">Cards · swipe</option><option value="stack">Stack · editorial</option>
+  </select></label>
+  <button type="button" id="replay" title="Replay the reveal"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>Replay</button>
+</div>
+
+<div class="petals" aria-hidden="true">
+  <span style="--s:12px;--t:17s;--d:-3s;left:8%"><i></i></span><span style="--s:9px;--t:21s;--d:-9s;left:22%"><i></i></span>
+  <span style="--s:14px;--t:19s;--d:-13s;left:37%"><i></i></span><span style="--s:10px;--t:24s;--d:-5s;left:52%"><i></i></span>
+  <span style="--s:12px;--t:18s;--d:-16s;left:66%"><i></i></span><span style="--s:8px;--t:22s;--d:-1s;left:78%"><i></i></span>
+  <span style="--s:13px;--t:20s;--d:-11s;left:90%"><i></i></span><span style="--s:11px;--t:23s;--d:-7s;left:15%"><i></i></span>
+  <span style="--s:9px;--t:16s;--d:-14s;left:58%"><i></i></span><span style="--s:15px;--t:25s;--d:-19s;left:84%"><i></i></span>
+</div>
+<div class="grain" aria-hidden="true"></div><div class="bars t" aria-hidden="true"></div><div class="bars b" aria-hidden="true"></div><div class="streak" aria-hidden="true"></div>
+<div class="marquee" aria-hidden="true"><span>Meher <i>&amp;</i> Arjun — 6 · 12 · 2026 — Ambar Bagh Palace, Jaipur — three days of celebration — </span></div>
+
+<!-- ── stage: one reveal per design; only the active one is displayed ── -->
+<div class="stage" id="stage">
+  <div class="stage-inner">
+    <div class="rv rv-env">
+      <div class="envelope" id="envelope">
+        <div class="env-back"></div>
+        <div class="env-lining"></div>
+        <div class="env-card" id="envCard"><p class="mini">Meher <span style="color:var(--brass)">&amp;</span> Arjun<small>6 · 12 · 2026</small></p></div>
+        <div class="env-pocket"><svg class="edge" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,0 50,56 100,0" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+        <div class="flap"><i class="front"><svg class="edge" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,0 50,100 100,0" fill="none" stroke="rgba(201,162,78,.45)" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></i><i class="back"></i></div>
+        <button class="seal" id="sealBtn" aria-label="Open the invitation"><span class="seal-in"><svg class="half hl" aria-hidden="true"><use href="#seal"/></svg><svg class="half hr" aria-hidden="true"><use href="#seal"/></svg></span></button>
+      </div>
+    </div>
+    <div class="rv rv-royal" id="rvRoyal">
+      <div class="doors"><div class="door dl"></div><div class="door dr"></div></div>
+      <button class="big" id="royalBtn" aria-label="Open the invitation"><svg class="mandala" id="mandalaBig" viewBox="-50 -50 100 100" aria-hidden="true"></svg><span class="word" lang="hi">शुभ विवाह</span></button>
+    </div>
+    <div class="rv rv-film" id="rvFilm">
+      <div class="tc tc1">A wedding in three days, in Jaipur</div>
+      <div class="tc tc2">Meher &amp; Arjun<span>Sunday, the sixth of December</span></div>
+      <button class="play" id="playBtn" aria-label="Play the invitation"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+      <div class="cut"></div>
+    </div>
+    <div class="rv rv-min" id="rvMin">
+      <div class="track" aria-hidden="true"><i></i><b></b></div>
+      <button class="open" id="minBtn">Open the invitation</button>
+    </div>
+    <div class="rv rv-kin" id="rvKin">
+      <span class="w" aria-hidden="true">Save</span><span class="w" aria-hidden="true">the</span><span class="w d" aria-hidden="true">date</span>
+      <button class="open" id="kinBtn">Open the invitation</button>
+      <div class="bar" aria-hidden="true"></div>
+    </div>
+    <p class="hint" id="hint">You are invited · <b>tap to open</b></p>
+    <button class="skip" id="skip">Skip the reveal</button>
+  </div>
+</div>
+
+<!-- ── the invitation ── -->
+<main class="page" id="page">
+  <section class="card" aria-label="Wedding invitation">
+    <span class="mono" aria-hidden="true">M·A</span>
+    <svg class="mandala" id="mandalaCard" viewBox="-50 -50 100 100" aria-hidden="true"></svg>
+    <svg class="garland" id="garland" viewBox="0 0 400 74" aria-hidden="true"></svg>
+    <p class="eyebrow anim" style="animation-delay:.35s"><span lang="hi">शुभ विवाह</span><small>Shubh Vivah</small></p>
+    <p class="with anim" style="animation-delay:.5s">Together with their families</p>
+    <h1 class="names" id="names" aria-label="Meher and Arjun"><span class="name">Meher</span><span class="amp" aria-hidden="true">&amp;</span><span class="name">Arjun</span></h1>
+    <p class="invite anim" style="animation-delay:1.4s">invite you to celebrate their wedding</p>
+    <p class="date" id="date"><span class="sr">6 December 2026.</span><span class="dtxt">6 · 12 · 2026</span><small class="anim" style="animation-delay:1.9s">Sunday, the sixth of December</small></p>
+    <p class="venue-line anim" style="animation-delay:1.95s"><em>Ambar Bagh Palace</em><br>Jaipur, Rajasthan</p>
+    <svg class="sprig" viewBox="0 0 96 26" aria-hidden="true"><use href="#leaf" x="8" y="7" width="30" height="12"/><use href="#leaf" x="58" y="7" width="30" height="12" transform="rotate(180 73 13)"/><use href="#marigold" x="37" y="2" width="22" height="22"/></svg>
+    <p class="share anim" style="animation-delay:2.3s"><a id="wa" href="#" target="_blank" rel="noopener">Share on WhatsApp</a><button type="button" id="copy">Copy link</button></p>
+    <p class="cue anim" style="animation-delay:2.5s">The celebrations
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M2 5l5 5 5-5"/></svg>
+    </p>
+  </section>
+
+  <section class="block" id="cdSec" aria-labelledby="cd">
+    <h2 class="label" id="cd">Until the pheras</h2>
+    <p class="count" id="count" aria-live="off">
+      <span class="unit d"><b class="num" id="dd"><i>--</i></b><small>days</small></span><span class="sep d">·</span>
+      <span class="unit"><b class="num" id="hh"><i>--</i></b><small>hours</small></span><span class="sep">·</span>
+      <span class="unit"><b class="num" id="mm"><i>--</i></b><small>minutes</small></span><span class="sep">·</span>
+      <span class="unit"><b class="num" id="ss"><i>--</i></b><small>seconds</small></span>
+    </p>
+    <p class="count-note" id="countNote">Muhurat at 5:00 pm IST, Sunday 6 December 2026</p>
+  </section>
+
+  <section class="block" id="evSec" aria-labelledby="ev">
+    <h2 class="label" id="ev">Three days of celebration</h2>
+    <ol class="timeline" id="tl">
+      <i class="prog" aria-hidden="true"></i>
+      <li class="day" style="--k:0">Friday 4 December</li>
+      <li class="ev" style="--k:1" data-t="2026-12-04T16:00:00+05:30">
+        <button class="ev-head" aria-expanded="false" aria-controls="evb1"><span class="dot"><svg class="ico mehndi" viewBox="0 0 32 32" aria-hidden="true"><path pathLength="1" d="M21 5c5 3 7 9 5 15-2 6-8 9-14 7S3 19 6 13c2-4 6-6 9-5 3 1 3 5 1 7"/><path pathLength="1" d="M17 12c-2 3-3 7 0 9 2 1 4 0 4-2"/><circle class="f" cx="10" cy="22" r="1.3"/><circle class="f" cx="24" cy="9" r="1.3"/><circle class="f" cx="14" cy="26" r="1"/></svg></span><span class="ev-t"><h3>Mehndi</h3><p class="when"><span>4:00 pm</span><span>Rose Courtyard</span></p></span><span class="ev-eta"></span></button>
+        <div class="ev-body" inert aria-hidden="true" id="evb1"><div><p>Henna, sherbet and an afternoon in the shade. The artists are booked for everyone, not only the bride.</p>
+          <dl class="ev-meta"><dt>Wear</dt><dd>Something you can sit on the floor in; greens and yellows welcome.</dd><dt>Bring</dt><dd>Nothing but time. Henna takes an hour to dry.</dd><dt>Ends</dt><dd>Around 7, when the sangeet doors open.</dd></dl></div></div>
+      </li>
+      <li class="ev" style="--k:2" data-t="2026-12-04T19:30:00+05:30">
+        <button class="ev-head" aria-expanded="false" aria-controls="evb2"><span class="dot"><svg class="ico sangeet" viewBox="0 0 32 32" aria-hidden="true"><g class="n1"><circle pathLength="1" cx="9" cy="24" r="3"/><path pathLength="1" d="M12 24V8"/></g><g class="n2"><circle pathLength="1" cx="22" cy="21" r="3"/><path pathLength="1" d="M25 21V5"/></g><path pathLength="1" d="M12 8l13-3"/><path pathLength="1" d="M12 12l13-3"/></svg></span><span class="ev-t"><h3>Sangeet</h3><p class="when"><span>7:30 pm</span><span>Durbar Hall</span></p></span><span class="ev-eta"></span></button>
+        <div class="ev-body" inert aria-hidden="true" id="evb2"><div><p>Both families have been rehearsing for months. Dinner follows the last dance, which nobody has agreed to yet.</p>
+          <dl class="ev-meta"><dt>Wear</dt><dd>Sequins, please. This is the night.</dd><dt>Bring</dt><dd>Your dance, if you have one. The floor is open after the families.</dd><dt>Ends</dt><dd>Late. Cars from midnight.</dd></dl></div></div>
+      </li>
+      <li class="day" style="--k:3">Saturday 5 December</li>
+      <li class="ev" style="--k:4" data-t="2026-12-05T10:00:00+05:30">
+        <button class="ev-head" aria-expanded="false" aria-controls="evb4"><span class="dot"><svg class="ico haldi" viewBox="0 0 32 32" aria-hidden="true"><path pathLength="1" d="M5 17h22c0 6-5 10-11 10S5 23 5 17z"/><path pathLength="1" d="M8 17c3-2 13-2 16 0"/><circle class="f d1" cx="12" cy="10" r="1.7"/><circle class="f d2" cx="17" cy="5" r="1.7"/><circle class="f d3" cx="22" cy="10" r="1.7"/></svg></span><span class="ev-t"><h3>Haldi</h3><p class="when"><span>10:00 am</span><span>At home</span></p></span><span class="ev-eta"></span></button>
+        <div class="ev-body" inert aria-hidden="true" id="evb4"><div><p>Family only. A morning of turmeric and mischief before the big day.</p>
+          <dl class="ev-meta"><dt>Wear</dt><dd>Old clothes. Turmeric does not wash out.</dd><dt>Bring</dt><dd>An appetite; breakfast is after, not before.</dd><dt>Ends</dt><dd>By noon, so everyone can rest.</dd></dl></div></div>
+      </li>
+      <li class="day" style="--k:5">Sunday 6 December</li>
+      <li class="ev" style="--k:6" data-t="2026-12-06T17:00:00+05:30">
+        <button class="ev-head" aria-expanded="false" aria-controls="evb6"><span class="dot"><svg class="ico pheras" viewBox="0 0 32 32" aria-hidden="true"><path pathLength="1" d="M3 11h26"/><path pathLength="1" d="M5 11c1.5 3 3.5 3 5 0M11 11c1.5 3 3.5 3 5 0M17 11c1.5 3 3.5 3 5 0M23 11c1.5 3 3.5 3 5 0"/><path pathLength="1" d="M7 11V28"/><path pathLength="1" d="M25 11V28"/><path class="f flame" d="M16 28c-3.5-3-4.5-7-1-10.5 0 3.5 2.5 3.5 3.5 6 1-2.5 1-5 0-7.5 3.5 3.5 3.5 8.5-2.5 12z"/></svg></span><span class="ev-t"><h3>Baraat &amp; Pheras</h3><p class="when"><span>5:00 pm</span><span>Palace Lawns</span></p></span><span class="ev-eta"></span></button>
+        <div class="ev-body" inert aria-hidden="true" id="evb6"><div><p>The baraat arrives at the gate at five; the pheras follow at the muhurat under the marigold mandap.</p>
+          <dl class="ev-meta"><dt>Wear</dt><dd>Traditional. The baraat walks, so shoes you can dance in.</dd><dt>Bring</dt><dd>Sunglasses for the baraat, a shawl for the pheras. December evenings in Jaipur turn cold.</dd><dt>Ends</dt><dd>The pheras take about an hour; dinner is at eight.</dd></dl></div></div>
+      </li>
+      <li class="ev" style="--k:7" data-t="2026-12-06T20:00:00+05:30">
+        <button class="ev-head" aria-expanded="false" aria-controls="evb7"><span class="dot"><svg class="ico reception" viewBox="0 0 32 32" aria-hidden="true"><g><path class="ray" pathLength="1" d="M16 14V4"/><path class="ray" pathLength="1" d="M16 14V4" transform="rotate(45 16 14)"/><path class="ray" pathLength="1" d="M16 14V4" transform="rotate(90 16 14)"/><path class="ray" pathLength="1" d="M16 14V4" transform="rotate(135 16 14)"/><path class="ray" pathLength="1" d="M16 14V4" transform="rotate(180 16 14)"/><path class="ray" pathLength="1" d="M16 14V4" transform="rotate(225 16 14)"/><path class="ray" pathLength="1" d="M16 14V4" transform="rotate(270 16 14)"/><path class="ray" pathLength="1" d="M16 14V4" transform="rotate(315 16 14)"/></g><path pathLength="1" d="M16 30c-1-6 0-10 0-14"/><circle class="f" cx="16" cy="14" r="1.6"/></svg></span><span class="ev-t"><h3>Reception</h3><p class="when"><span>8:00 pm</span><span>Palace Lawns</span></p></span><span class="ev-eta"></span></button>
+        <div class="ev-body" inert aria-hidden="true" id="evb7"><div><p>Dinner, dancing and the last of the fireworks. Carriages at midnight.</p>
+          <dl class="ev-meta"><dt>Wear</dt><dd>Black tie, Indian or western.</dd><dt>Bring</dt><dd>Nothing. The couple would rather have you than a gift.</dd><dt>Ends</dt><dd>Midnight, firmly. The palace insists.</dd></dl></div></div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="block" aria-labelledby="vn">
+    <h2 class="label" id="vn">Getting there</h2>
+    <div class="panel">
+      <h3>Ambar Bagh Palace</h3>
+      <p>Amer Road, Jaipur 302002 · 25 minutes from Jaipur airport. Rooms are held for out-of-town guests under “Meher &amp; Arjun” until 1 November. Replies go to Amma on the family group; she would rather hear it from you than from a form.</p>
+      <div class="links">
+        <a class="tlink" href="https://www.google.com/maps/search/?api=1&query=Amer+Road+Jaipur" target="_blank" rel="noopener">Open in Maps</a>
+        <a class="tlink" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Meher+%26+Arjun+%E2%80%94+Wedding&dates=20261206T113000Z/20261206T183000Z&location=Ambar+Bagh+Palace%2C+Amer+Road%2C+Jaipur&details=Baraat+at+5pm%2C+pheras+at+the+muhurat%2C+reception+at+8pm" target="_blank" rel="noopener">Add to calendar</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <b>Meher &amp; Arjun</b> are fictional. A study piece by the graphics department:<br>five designs, seven colour themes, one three-day celebration.
+  </footer>
+</main>
+<div class="toast" id="toast" role="status">Link copied</div>
+<button class="mute" id="mute" type="button" aria-label="Mute sound" aria-pressed="false" title="Sound">
+  <svg class="on" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 9a4 4 0 0 1 0 6"/><path d="M18.5 6.5a8 8 0 0 1 0 11"/></svg>
+  <svg class="off" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M17 9l4 6M21 9l-4 6"/></svg>
+</button>
+
+<script>
+(function(){
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const body = document.body, stage = document.getElementById('stage'), env = document.getElementById('envelope'), envCard = document.getElementById('envCard');
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+  let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  const $ = id => document.getElementById(id);
+
+  /* ── design × theme colour: two attributes on body, persisted per viewer, shareable via ?design=&theme= ── */
+  const DESIGNS = ['letterpress','royal','film','minimal','kinetic'], PALETTES = ['emerald','demon','amber','orchard','coastal','plum','slate'];
+  const LAYOUTS = ['list','cards','stack'];   // how the event information is laid out — independent of design and palette
+  const q = new URLSearchParams(location.search);
+  const LOOK = { design: 'royal', palette: 'plum', layout: 'list' };   // the couple's chosen look — the only one a guest ever sees
+  const review = q.get('review') === '1';                         // ?review=1 exposes the picker, the URL params and per-viewer persistence
+  let saved = {}; if (review){ try { saved = JSON.parse(localStorage.getItem('invite-look') || '{}'); } catch (_) {} }
+  const pick = (list, ...cands) => cands.find(c => list.includes(c)) || list[0];
+  let design = review ? pick(DESIGNS, q.get('design'), saved.design, LOOK.design) : LOOK.design;
+  let palette = review ? pick(PALETTES, q.get('theme'), saved.palette, LOOK.palette) : LOOK.palette;
+  let layout = review ? pick(LAYOUTS, q.get('layout'), saved.layout, LOOK.layout) : LOOK.layout;
+  if (review) body.setAttribute('data-review', '1');
+  let scrollAccordion = null;                 // built further down; syncEvents() may run before it exists
+  const dSel = $('design'), pSel = $('palette'), lSel = $('layout');
+  function apply(){
+    body.setAttribute('data-design', design); body.setAttribute('data-palette', palette); body.setAttribute('data-layout', layout);
+    dSel.value = design; pSel.value = palette; lSel.value = layout;
+    syncEvents();
+    if (review){ try { localStorage.setItem('invite-look', JSON.stringify({ design, palette, layout })); } catch (_) {} }
+  }
+  /* cards and stack show every event in full, so the head stops being a control and the bodies
+     must leave `inert`/`aria-hidden` — otherwise the content is visible but absent to a screen
+     reader, which is the exact defect the v3 review caught on the accordion. */
+  function syncEvents(){
+    const alwaysOpen = layout !== 'list';
+    document.querySelectorAll('.ev').forEach(li => {
+      const head = li.querySelector('.ev-head'), b = li.querySelector('.ev-body');
+      if (alwaysOpen){
+        li.classList.add('open'); head.removeAttribute('aria-expanded'); head.tabIndex = -1;
+        b.inert = false; b.setAttribute('aria-hidden', 'false');
+      } else {
+        li.classList.remove('open'); head.setAttribute('aria-expanded', 'false'); head.tabIndex = 0;
+        b.inert = true; b.setAttribute('aria-hidden', 'true');
+      }
+    });
+    if (scrollAccordion){ scrollAccordion.reset(); scrollAccordion.update(); }
+  }
+  apply();
+  dSel.addEventListener('change', () => { design = dSel.value; apply(); if (!opened) resetStage(); });
+  pSel.addEventListener('change', () => { palette = pSel.value; apply(); });
+  lSel.addEventListener('change', () => { layout = lSel.value; apply(); });
+
+  /* letters that rise one by one */
+  function split(el, opts = {}){
+    let i = opts.start || 0;
+    el.querySelectorAll(opts.sel || '.name').forEach(n => {
+      const t = n.textContent; n.textContent = ''; n.setAttribute('aria-hidden', 'true');
+      for (const ch of t){
+        const s = document.createElement('span'); s.className = 'l'; s.textContent = ch === ' ' ? ' ' : ch;
+        s.style.setProperty('--i', i++); s.style.setProperty('--j', Math.round((rnd() - .5) * 30) + 'ms'); s.style.setProperty('--r', ((rnd() - .5) * 3).toFixed(2) + 'deg');
+        if (opts.late && opts.late.test(ch)) s.style.setProperty('--j', '480ms');
+        n.appendChild(s);
+      }
+      i += opts.gap == null ? 3 : opts.gap;
+    });
+  }
+  split($('names'));
+  split($('date'), { sel: '.dtxt', late: /·/ });
+
+  /* garland (letterpress) */
+  (function garland(){
+    const g = $('garland'), NS = 'http://www.w3.org/2000/svg', N = 15, pts = [];
+    for (let k = 0; k <= N; k++){ const t = k / N; pts.push([14 + t * 372, 8 + 44 * 4 * t * (1 - t) + (k === 0 || k === N ? 0 : (rnd() - .5) * 4)]); }
+    const path = document.createElementNS(NS, 'path');
+    path.setAttribute('d', 'M' + pts.map(p => p[0].toFixed(1) + ' ' + p[1].toFixed(1)).join(' L'));
+    path.setAttribute('fill', 'none'); path.setAttribute('stroke', 'var(--brass-deep)'); path.setAttribute('stroke-width', '1.1'); path.setAttribute('stroke-linejoin', 'round'); path.setAttribute('opacity', '.8');
+    g.appendChild(path);
+    pts.forEach(([x, y], k) => {
+      if (k === 0 || k === N){ const c = document.createElementNS(NS, 'circle'); c.setAttribute('cx', x); c.setAttribute('cy', y); c.setAttribute('r', 3.5); c.setAttribute('fill', 'none'); c.setAttribute('stroke', 'var(--brass-deep)'); c.setAttribute('stroke-width', '1.4'); g.appendChild(c); return; }
+      const t = k / N, slope = Math.atan2(44 * 4 * (1 - 2 * t), 372) * 180 / Math.PI, tilt = (rnd() - .5) * 30;
+      const wrap = document.createElementNS(NS, 'g'), u = document.createElementNS(NS, 'use');
+      if (k % 2 === 0){ const s = (23 - 4 * Math.abs(.5 - t)) * (1 + (rnd() - .5) * .2); u.setAttribute('href', '#marigold'); u.setAttribute('width', s); u.setAttribute('height', s); u.setAttribute('x', x - s / 2); u.setAttribute('y', y - 3); wrap.setAttribute('transform', `rotate(${tilt.toFixed(1)} ${x} ${y})`); }
+      else { const flip = k === 7 ? 180 : 0; u.setAttribute('href', '#leaf'); u.setAttribute('width', 26); u.setAttribute('height', 10); u.setAttribute('x', x - 13); u.setAttribute('y', y - 3); wrap.setAttribute('transform', `rotate(${(-slope + tilt * .5 + flip).toFixed(1)} ${x} ${y})`); }
+      u.setAttribute('class', 'sw'); u.style.setProperty('--gd', (4.2 + rnd() * 2.4).toFixed(2) + 's'); u.style.setProperty('--gp', (-rnd() * 6).toFixed(2) + 's');
+      wrap.appendChild(u); g.appendChild(wrap);
+    });
+  })();
+
+  /* mandala (royal): four rings of circles and petal arcs, one rotated shape each, plus eight marigold dots */
+  function mandala(svg){
+    const NS = 'http://www.w3.org/2000/svg', el = (t, a) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); return e; };
+    const spin = el('g', { class: 'spin' });
+    [[46, 'r1'], [40, 'r2'], [30, 'r3'], [18, 'r4']].forEach(([r, c]) => spin.appendChild(el('circle', { r, class: c, pathLength: 1 })));
+    for (let k = 0; k < 12; k++){ spin.appendChild(el('path', { class: 'r2', d: 'M0 -40 Q 8 -32 0 -26 Q -8 -32 0 -40 Z', transform: `rotate(${k * 30})`, pathLength: 1 })); }
+    for (let k = 0; k < 8; k++){ spin.appendChild(el('path', { class: 'r3', d: 'M0 -30 Q 9 -20 0 -8 Q -9 -20 0 -30 Z', transform: `rotate(${k * 45 + 22.5})`, pathLength: 1 })); }
+    for (let k = 0; k < 8; k++){ const gp = el('g', { transform: `rotate(${k * 45})` }), p = el('circle', { class: 'pet', r: 2.6, cx: 0, cy: -34 }); p.style.setProperty('--n', k); gp.appendChild(p); spin.appendChild(gp); }
+    for (let k = 0; k < 16; k++){ spin.appendChild(el('path', { class: 'r4', d: 'M0 -18 L 0 -46', transform: `rotate(${k * 22.5 + 11.25})`, pathLength: 1, opacity: .45 })); }
+    spin.appendChild(el('circle', { r: 4, class: 'r4', pathLength: 1 }));
+    svg.appendChild(spin);
+  }
+  mandala($('mandalaCard')); mandala($('mandalaBig'));
+
+  /* marquee (kinetic): duplicate once so the loop is seamless */
+  const mq = document.querySelector('.marquee'); mq.appendChild(mq.firstElementChild.cloneNode(true));
+
+  /* ── sound: one synthesized cue per design, gesture-gated (only ever started inside the open tap), never autoplay, never a bed ── */
+  const sound = (() => {
+    let ctx = null, muted = false, played = 0;
+    try { muted = localStorage.getItem('invite-sound') === 'off'; } catch (_) {}
+    const btn = $('mute');
+    const paint = () => { btn.setAttribute('aria-pressed', String(muted)); btn.setAttribute('aria-label', muted ? 'Unmute sound' : 'Mute sound'); };
+    paint();
+    btn.addEventListener('click', () => { muted = !muted; try { localStorage.setItem('invite-sound', muted ? 'off' : 'on'); } catch (_) {} paint();
+      if (muted){ if (bed) bed.stop(); if (ctx) ctx.suspend(); }
+      else { if (ctx) ctx.resume(); if (opened) startBed(); } });
+    const ensure = () => { const AC = window.AudioContext || window.webkitAudioContext; if (!AC) return null; if (!ctx) ctx = new AC(); if (ctx.state === 'suspended') ctx.resume(); return ctx; };
+    // two primitives: shaped noise (paper, doors, projector hiss) and a tone (thuds, ticks, swells)
+    function noise(t0, dur, o = {}){ const c = ctx, len = Math.ceil(c.sampleRate * dur), buf = c.createBuffer(1, len, c.sampleRate), d = buf.getChannelData(0);
+      for (let i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;
+      const src = c.createBufferSource(); src.buffer = buf;
+      const f = c.createBiquadFilter(); f.type = o.type || 'bandpass'; f.frequency.setValueAtTime(o.freq || 1200, t0); if (o.sweep) f.frequency.exponentialRampToValueAtTime(o.sweep, t0 + dur); f.Q.value = o.q || .8;
+      const g = c.createGain(); g.gain.setValueAtTime(.0001, t0); g.gain.exponentialRampToValueAtTime(o.gain || .2, t0 + (o.attack || .02)); g.gain.exponentialRampToValueAtTime(.0001, t0 + dur);
+      src.connect(f).connect(g).connect(c.destination); src.start(t0); src.stop(t0 + dur + .05); }
+    function tone(t0, dur, o = {}){ const c = ctx, osc = c.createOscillator(); osc.type = o.type || 'sine'; osc.frequency.setValueAtTime(o.freq || 110, t0); if (o.to) osc.frequency.exponentialRampToValueAtTime(o.to, t0 + dur);
+      const g = c.createGain(); g.gain.setValueAtTime(.0001, t0); g.gain.exponentialRampToValueAtTime(o.gain || .2, t0 + (o.attack || .005)); g.gain.exponentialRampToValueAtTime(.0001, t0 + dur);
+      osc.connect(g).connect(c.destination); osc.start(t0); osc.stop(t0 + dur + .05); }
+    const cues = {
+      letterpress(t){ noise(t, .09, { type: 'highpass', freq: 2500, gain: .35, attack: .003 }); tone(t, .12, { freq: 140, to: 60, gain: .22 });          // the seal cracks
+                      noise(t + .9, .5, { freq: 900, q: .6, gain: .14, attack: .12, sweep: 1600 });                                                        // paper slides out
+                      noise(t + 1.75, .7, { freq: 700, q: .6, gain: .12, attack: .2, sweep: 1400 }); },                                                   // and grows into the card
+      royal(t){ noise(t, 1, { type: 'lowpass', freq: 220, q: .7, gain: .3, attack: .15, sweep: 120 }); tone(t + .95, .25, { freq: 70, to: 45, gain: .2 }); },   // doors rumble apart, settle
+      film(t){ tone(t, 2.6, { freq: 55, type: 'triangle', gain: .16, to: 110, attack: .8 }); noise(t, 2.4, { freq: 300, q: .5, gain: .06, attack: .6 });      // projector spins up
+               noise(t + 5.3, .08, { type: 'highpass', freq: 3000, gain: .3, attack: .002 }); },                                                              // the cut
+      minimal(t){ tone(t, .07, { freq: 1800, gain: .08, attack: .002 }); },                                                                                    // one soft tick
+      kinetic(t){ tone(t, .3, { freq: 120, to: 40, gain: .35, attack: .004 }); noise(t, .05, { type: 'highpass', freq: 1500, gain: .25, attack: .002 }); }    // bass hit on the wipe
+    };
+    /* ── the bed: bansuri and strings over a tanpura drone ──────────────────────
+       Every note is synthesized here rather than loaded. Two reasons, both hard: the
+       artifact's CSP blocks media from every host, so an mp3 could only ever arrive as
+       a data URI; and a licensed track is a provenance question this department will not
+       leave open (scope-and-safety: music is licensed software, same as fonts). Built,
+       it is house-owned, a few hundred bytes, and it can breathe with the page.
+
+       Why it stays in tune: the melody is drawn from Bhupali — the major pentatonic,
+       S R G P D — sung at Indian weddings and, more practically, a scale in which every
+       degree is consonant against a fixed tonic drone. A random walk cannot produce a
+       clash, so the phrase can wander without ever needing a composer to check it. */
+    const BED = { tonic: 130.81,                                     // C3
+                  scale: [0, 2, 4, 7, 9, 12, 14, 16] };              // Bhupali degrees, in semitones
+    /* Layers, deliberately switchable. Dora heard the first mix and asked for flute alone to
+       start with, so that is what plays; the drone and the bowed pad stay here behind flags
+       rather than being deleted, because "now add the violin" should be one word, not a rebuild. */
+    const LAYERS = { flute: true, shehnai: true, drone: false, strings: false };
+    const semi = n => Math.pow(2, n / 12);
+    let bed = null;
+    function startBed(){
+      if (bed || muted || !ensure()) return;
+      const c = ctx, t = c.currentTime;
+      const out = c.createGain(); out.gain.setValueAtTime(0.0001, t);
+      out.gain.exponentialRampToValueAtTime(0.9, t + 3);            // steal in, never announce itself
+      const warm = c.createBiquadFilter(); warm.type = 'lowpass'; warm.frequency.value = 2600;
+      out.connect(warm).connect(c.destination);
+      /* A solo flute in a dry room sounds like a test tone, and with no drone under it the
+         gaps between phrases fall to true silence. This is a small hall, built rather than
+         sampled: an impulse response of decaying noise, which is all a convolution reverb
+         needs. It gives each note a tail so the line feels played in a room. */
+      const revLen = Math.floor(c.sampleRate * 2.6), ir = c.createBuffer(2, revLen, c.sampleRate);
+      for (let ch = 0; ch < 2; ch++){ const d = ir.getChannelData(ch);
+        for (let i = 0; i < revLen; i++){
+          const decay = Math.pow(1 - i / revLen, 2.6);
+          d[i] = (Math.random() * 2 - 1) * decay * (i < c.sampleRate * 0.01 ? i / (c.sampleRate * 0.01) : 1);
+        } }
+      const rev = c.createConvolver(); rev.buffer = ir;
+      const wet = c.createGain(); wet.gain.value = 0.5;
+      const revDamp = c.createBiquadFilter(); revDamp.type = 'lowpass'; revDamp.frequency.value = 1800;
+      out.connect(rev).connect(revDamp).connect(wet).connect(c.destination);
+      const stopFns = [];
+
+      if (LAYERS.drone){
+        const droneG = c.createGain(); droneG.gain.value = 0.03; droneG.connect(out);
+        [[BED.tonic, 0], [BED.tonic, 0.15], [BED.tonic * semi(7), -0.12]].forEach(([f, det]) => {
+          const o = c.createOscillator(); o.type = 'triangle';
+          o.frequency.value = f; o.detune.value = det * 100;
+          o.connect(droneG); o.start(t); stopFns.push(() => { try { o.stop(); } catch (_) {} });
+        });
+      }
+
+      if (LAYERS.strings){
+        const strG = c.createGain(); strG.gain.value = 0.0001;
+        const strF = c.createBiquadFilter(); strF.type = 'lowpass'; strF.frequency.value = 900; strF.Q.value = 0.7;
+        strG.connect(strF).connect(out);
+        const strOscs = [-5, 0, 5].map(det => { const o = c.createOscillator(); o.type = 'sawtooth'; o.detune.value = det;
+          o.frequency.value = BED.tonic * 2; o.connect(strG); o.start(t);
+          stopFns.push(() => { try { o.stop(); } catch (_) {} }); return o; });
+        const strVib = c.createOscillator(), strVibG = c.createGain();
+        strVib.frequency.value = 4.6; strVibG.gain.value = 3;
+        strOscs.forEach(o => strVibG.connect(o.detune)); strVib.connect(strVibG); strVib.start(t);
+        stopFns.push(() => { try { strVib.stop(); } catch (_) {} });
+        strG.gain.exponentialRampToValueAtTime(0.05, t + 6);
+        const chords = [[0, 4, 7], [0, 4, 9], [2, 7, 11], [0, 4, 7]];
+        let chordIx = 0;
+        const moveChord = () => { if (!bed) return;
+          const now = c.currentTime, ch = chords[chordIx++ % chords.length];
+          strOscs.forEach((o, i) => o.frequency.setTargetAtTime(BED.tonic * 2 * semi(ch[i % ch.length]), now, 1.6));
+          strF.frequency.setTargetAtTime(700 + Math.random() * 500, now, 2.5); };
+        moveChord();
+        const chordTimer = setInterval(moveChord, 9000);
+        stopFns.push(() => clearInterval(chordTimer));
+      }
+
+      /* one bansuri note: a sine body with a breathy second harmonic, a soft edge, and
+         vibrato that arrives after the attack — the way a player leans into a held note. */
+      function flute(t0, freq, dur, glideFrom){
+        const o = c.createOscillator(); o.type = 'sine';
+        if (glideFrom){ o.frequency.setValueAtTime(glideFrom, t0); o.frequency.setTargetAtTime(freq, t0, 0.06); }  // meend
+        else o.frequency.setValueAtTime(freq, t0);
+        const h = c.createOscillator(); h.type = 'triangle'; h.frequency.setValueAtTime(freq * 2, t0);
+        const hg = c.createGain(); hg.gain.value = 0.05;
+        const vib = c.createOscillator(), vibG = c.createGain();
+        vib.frequency.value = 5.2; vibG.gain.setValueAtTime(0, t0);
+        vibG.gain.linearRampToValueAtTime(freq * 0.006, t0 + Math.min(0.45, dur * 0.5));
+        vib.connect(vibG); vibG.connect(o.frequency); vib.start(t0); vib.stop(t0 + dur + 0.3);
+        const g = c.createGain();
+        g.gain.setValueAtTime(0.0001, t0);
+        g.gain.exponentialRampToValueAtTime(0.13, t0 + 0.13);         // breath, not a pluck
+        g.gain.setValueAtTime(0.13, t0 + dur * 0.8);
+        g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+        o.connect(g); h.connect(hg).connect(g); g.connect(out);
+        o.start(t0); h.start(t0); o.stop(t0 + dur + 0.3); h.stop(t0 + dur + 0.3);
+        const br = c.createBufferSource(), len = Math.ceil(c.sampleRate * dur);
+        const buf = c.createBuffer(1, len, c.sampleRate), d = buf.getChannelData(0);
+        for (let i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;
+        br.buffer = buf;
+        const bf = c.createBiquadFilter(); bf.type = 'bandpass'; bf.frequency.value = freq * 2.2; bf.Q.value = 1.2;
+        const bg = c.createGain(); bg.gain.setValueAtTime(0.0001, t0);
+        bg.gain.exponentialRampToValueAtTime(0.012, t0 + 0.12); bg.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+        br.connect(bf).connect(bg).connect(out); br.start(t0); br.stop(t0 + dur + 0.05);
+      }
+
+      /* The shehnai: the instrument actually played at the baraat, so it belongs here more than
+         any other. It is a double reed — nasal and bright, not pure like the flute — so it is
+         built the opposite way round: a sawtooth pushed through two narrow bandpass formants
+         near 1.1k and 2.9k, which is what gives a reed its cry. Kept a little quieter than the
+         flute because a real one carries over a street. */
+      function shehnaiNote(t0, freq, dur, glideFrom){
+        const o = c.createOscillator(); o.type = 'sawtooth';
+        if (glideFrom){ o.frequency.setValueAtTime(glideFrom, t0); o.frequency.setTargetAtTime(freq, t0, 0.07); }
+        else o.frequency.setValueAtTime(freq, t0);
+        const o2 = c.createOscillator(); o2.type = 'sawtooth'; o2.detune.value = 7;   // two reeds never agree exactly
+        if (glideFrom){ o2.frequency.setValueAtTime(glideFrom, t0); o2.frequency.setTargetAtTime(freq, t0, 0.07); }
+        else o2.frequency.setValueAtTime(freq, t0);
+        const f1 = c.createBiquadFilter(); f1.type = 'bandpass'; f1.frequency.value = 1100; f1.Q.value = 3.2;
+        const f2 = c.createBiquadFilter(); f2.type = 'bandpass'; f2.frequency.value = 2900; f2.Q.value = 4.5;
+        const f2g = c.createGain(); f2g.gain.value = 0.62;
+        const tame = c.createBiquadFilter(); tame.type = 'lowpass'; tame.frequency.value = 3400;
+        const vib = c.createOscillator(), vibG = c.createGain();
+        vib.frequency.value = 5.8; vibG.gain.setValueAtTime(0, t0);
+        vibG.gain.linearRampToValueAtTime(freq * 0.008, t0 + Math.min(0.4, dur * 0.5));
+        vib.connect(vibG); vibG.connect(o.frequency); vibG.connect(o2.frequency);
+        vib.start(t0); vib.stop(t0 + dur + 0.3);
+        const g = c.createGain();
+        g.gain.setValueAtTime(0.0001, t0);
+        g.gain.exponentialRampToValueAtTime(0.2, t0 + 0.1);
+        g.gain.setValueAtTime(0.2, t0 + dur * 0.8);
+        g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+        o.connect(f1); o2.connect(f1); o.connect(f2); o2.connect(f2);
+        f1.connect(g); f2.connect(f2g).connect(g); g.connect(tame).connect(out);
+        o.start(t0); o2.start(t0); o.stop(t0 + dur + 0.3); o2.stop(t0 + dur + 0.3);
+      }
+
+      // a phrase that walks by step, leaps rarely, rests, and comes home to the tonic
+      /* A continuous line, not a sequence of separate notes: every note is scheduled to begin
+         before the one before it has finished, so its attack lands inside the previous note's
+         release and the two crossfade. Each note also glides from the last pitch, which is how
+         a bansuri actually moves between notes (meend). The result never falls silent. */
+      let ix = 2, nextAt = c.currentTime + 2, lastFreq = null, sinceHome = 0, noteNo = 0;
+      const tick = () => {
+        if (!bed) return;
+        const horizon = c.currentTime + 2;
+        while (nextAt < horizon){
+          const step = Math.random() < 0.74 ? (Math.random() < 0.5 ? -1 : 1) : (Math.random() < 0.5 ? -2 : 2);
+          ix = Math.max(0, Math.min(BED.scale.length - 1, ix + step));
+          if (sinceHome > 7 && Math.random() < 0.5){ ix = 0; }                        // settle home now and then
+          const freq = BED.tonic * 2 * semi(BED.scale[ix]);
+          const dur = ix === 0 ? 3.2 : (Math.random() < 0.35 ? 2.4 : 1.6);
+          // the two instruments trade phrases rather than playing over each other
+          const voice = (!LAYERS.shehnai || Math.floor(noteNo / 4) % 2 === 0) ? flute : shehnaiNote;
+          voice(nextAt, voice === shehnaiNote ? freq / 2 : freq, dur, lastFreq);        // the shehnai answers an octave below
+          noteNo++;
+          lastFreq = voice === shehnaiNote ? freq / 2 : freq;
+          nextAt += dur * 0.62;                                                        // the next breath enters while this one still sounds
+          sinceHome = ix === 0 ? 0 : sinceHome + 1;
+        }
+      };
+      tick();
+      const noteTimer = setInterval(tick, 250);
+      bed = { out, stop(){ clearInterval(noteTimer); stopFns.forEach(f => f()); const n = c.currentTime;
+                out.gain.cancelScheduledValues(n); out.gain.setValueAtTime(out.gain.value, n);
+                out.gain.exponentialRampToValueAtTime(0.0001, n + 1.2); bed = null; } };
+    }
+    // a page nobody is looking at should not be playing to an empty room
+    document.addEventListener('visibilitychange', () => { if (!ctx) return;
+      if (document.hidden) ctx.suspend(); else if (!muted) ctx.resume(); });
+
+    return {
+      play(name){ if (muted || reduce) return false; const c = ensure(); if (!c) return false; (cues[name] || cues.minimal)(c.currentTime + .02); played++; return true; },
+      startBed(){ if (muted) return false; startBed(); return !!bed; },
+      stopBed(){ if (bed) bed.stop(); },
+      get bedPlaying(){ return !!bed; },
+      get state(){ return ctx ? ctx.state : 'none'; }, get muted(){ return muted; }, get played(){ return played; }
+    };
+  })();
+  window.__invite = { sound };
+
+  /* ── the reveal: one sequence per design, all ending in reveal() ── */
+  let opened = false;
+  const fontsReady = () => Promise.race([document.fonts.ready, sleep(1500)]);
+  function reveal(){ body.classList.add('revealed'); }
+  const seq = {
+    async letterpress(){
+      env.classList.add('opening'); await sleep(900);
+      env.classList.add('rising'); await sleep(850);
+      const target = document.querySelector('.card').getBoundingClientRect();
+      const A = envCard.getBoundingClientRect(), envR = env.getBoundingClientRect();
+      envCard.style.transition = 'none'; envCard.style.transform = 'none'; void envCard.offsetHeight;
+      const A0 = envCard.getBoundingClientRect();
+      envCard.style.top = (A0.top - envR.top) + 'px'; envCard.style.bottom = 'auto'; envCard.style.height = A0.height + 'px'; envCard.style.transformOrigin = '0 0';
+      envCard.style.transform = `translate(0px, ${A.top - A0.top}px)`; void envCard.offsetHeight;
+      const s = target.width / A0.width;
+      envCard.style.transition = 'transform .95s cubic-bezier(.2,.8,.2,1), height .95s cubic-bezier(.2,.8,.2,1)';
+      envCard.style.transform = `translate(${target.left - A0.left}px, ${target.top - A0.top}px) scale(${s})`;
+      envCard.style.height = (target.height / s) + 'px';
+      stage.classList.add('flip'); await sleep(960);
+    },
+    async royal(){ const r = $('rvRoyal'); r.classList.add('parting'); stage.classList.add('flip'); await sleep(1000); },
+    async film(){ const r = $('rvFilm'); r.classList.add('rolling'); stage.classList.add('flip'); await sleep(5300); r.classList.add('cutting'); await sleep(180); },
+    async minimal(){ const r = $('rvMin'); r.classList.add('drawing'); stage.classList.add('flip'); await sleep(1050); },
+    async kinetic(){ const r = $('rvKin'); r.classList.add('wipe'); stage.classList.add('flip'); await sleep(380); }
+  };
+  async function open(skip){
+    if (opened) return; opened = true;
+    if (skip || reduce){ await fontsReady(); reveal(); return; }
+    sound.play(design);
+    setTimeout(() => sound.startBed(), 2200);        // let the design's own cue land first
+    await seq[design](); await fontsReady(); reveal();
+  }
+  ['sealBtn', 'royalBtn', 'playBtn', 'minBtn', 'kinBtn'].forEach(id => $(id).addEventListener('click', () => open(false)));
+  env.addEventListener('click', e => { if (!e.target.closest('.seal')) open(false); });
+  $('skip').addEventListener('click', () => open(true));
+
+  function resetStage(){
+    env.classList.remove('opening', 'rising'); stage.classList.remove('flip');
+    envCard.removeAttribute('style');
+    ['rvRoyal', 'rvFilm', 'rvMin', 'rvKin'].forEach(id => $(id).className = $(id).className.replace(/\b(parting|rolling|cutting|drawing|wipe)\b/g, '').trim());
+  }
+  const restart = els => els.forEach(el => { el.style.animation = 'none'; void el.offsetWidth; el.style.animation = ''; });
+  $('replay').addEventListener('click', async () => {
+    body.classList.remove('revealed'); opened = false; window.scrollTo(0, 0);
+    document.querySelectorAll('section.block').forEach(s => { s.classList.remove('in'); io.observe(s); });
+    document.querySelectorAll('.ev.open').forEach(e => toggleEv(e, false));
+    resetStage();
+    restart(document.querySelectorAll('.l, .anim, .garland, .sprig, .names .amp, .mandala circle, .mandala path, .ico path, .ico circle'));
+  });
+
+  /* scroll reveal, plus the light that travels the timeline */
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -12% 0px' });
+  document.querySelectorAll('section.block').forEach(s => io.observe(s));
+  const tl = $('tl'); let raf = 0;
+  function progress(){
+    raf = 0; const r = tl.getBoundingClientRect(), mid = innerHeight * .55;
+    const p = Math.min(1, Math.max(0, (mid - r.top - 14) / (r.height - 28)));
+    tl.style.setProperty('--p', p.toFixed(3));
+  }
+  addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(progress); }, { passive: true });
+  addEventListener('resize', progress); progress();
+
+  (function tagDays(){ let d = ''; document.querySelectorAll('.timeline > li').forEach(li => {
+    if (li.classList.contains('day')) d = li.textContent.trim(); else if (li.classList.contains('ev')) li.dataset.day = d; }); })();
+
+  /* events: open on tap, one at a time; "in N days" pills; next / past states */
+  function toggleEv(li, on){ li.classList.toggle('open', on); li.querySelector('.ev-head').setAttribute('aria-expanded', on); const b = li.querySelector('.ev-body'); b.inert = !on; b.setAttribute('aria-hidden', String(!on)); }
+  document.querySelectorAll('.ev-head').forEach(b => b.addEventListener('click', () => {
+    if (layout !== 'list') return;                       // nothing to expand when everything is already open
+    const li = b.closest('.ev'), on = !li.classList.contains('open');
+    document.querySelectorAll('.ev.open').forEach(o => { if (o !== li) toggleEv(o, false); });
+    toggleEv(li, on);
+  }));
+
+  /* ── the timeline follows the scroll ────────────────────────────────────────
+     Reading the schedule should not cost five taps: whichever event is nearest the
+     reading line opens itself and the rest close. Three things keep it from fighting
+     the reader: a dead zone, so a candidate must be clearly nearer before it wins;
+     explicit scroll compensation, so the event you are looking at stays put when the
+     one above it collapses (browser scroll anchoring is switched off on the list so
+     only one mechanism moves the page); and a short pin after a tap, so a deliberate
+     choice is never overridden by the scroll that follows it. */
+  scrollAccordion = (() => {
+    const tl = $('tl'); if (!tl) return { reset(){}, update(){} };
+    const evs = [...tl.querySelectorAll('.ev')];
+    let active = -1, queued = false, pinnedUntil = 0;
+    const READ_LINE = 0.42, DEAD_ZONE = 30;                 // fraction of viewport, and px of hysteresis
+    const centre = li => { const r = li.querySelector('.ev-head').getBoundingClientRect(); return r.top + r.height / 2; };
+    function update(){
+      queued = false;
+      if (layout !== 'list' || !evs.length || Date.now() < pinnedUntil) return;
+      const sect = tl.closest('section.block'), r = sect.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > innerHeight) return;      // only while the schedule is on screen
+      const line = innerHeight * READ_LINE;
+      let best = -1, bestD = Infinity;
+      evs.forEach((li, i) => { const d = Math.abs(centre(li) - line); if (d < bestD){ bestD = d; best = i; } });
+      if (best < 0 || best === active) return;
+      if (active >= 0 && Math.abs(centre(evs[active]) - line) - bestD < DEAD_ZONE) return;
+      const before = evs[best].getBoundingClientRect().top;
+      evs.forEach((li, i) => toggleEv(li, i === best));
+      active = best;
+      const shift = evs[best].getBoundingClientRect().top - before;   // height added or removed above it
+      if (shift) scrollBy(0, shift);
+    }
+    function onScroll(){ if (!queued){ queued = true; requestAnimationFrame(update); } }
+    addEventListener('scroll', onScroll, { passive: true });
+    addEventListener('resize', () => { active = -1; onScroll(); });
+    tl.addEventListener('click', () => {                    // a tap wins for a moment
+      pinnedUntil = Date.now() + 1400;
+      active = evs.findIndex(li => li.classList.contains('open'));
+    });
+    return { reset(){ active = -1; }, update: onScroll };
+  })();
+  (function eta(){
+    const now = Date.now(); let nextSet = false;
+    const midnight = ms => { const x = new Date(ms); x.setHours(0, 0, 0, 0); return x.getTime(); };   // calendar days in the viewer's own clock
+    const today = midnight(now);
+    document.querySelectorAll('.ev').forEach(li => {
+      const t = new Date(li.dataset.t).getTime(), d = Math.round((midnight(t) - today) / 864e5), pill = li.querySelector('.ev-eta');
+      if (t + 4 * 36e5 < now){ li.classList.add('past'); pill.textContent = 'done'; }
+      else if (t <= now){ pill.textContent = 'now'; if (!nextSet){ li.classList.add('next'); nextSet = true; } }
+      else { pill.textContent = d <= 0 ? 'today' : d === 1 ? 'tomorrow' : `in ${d} days`; if (!nextSet){ li.classList.add('next'); nextSet = true; } }
+      if (li.classList.contains('next')) pill.setAttribute('aria-label', pill.textContent + ' — this is the next event');
+    });
+  })();
+
+  /* share: the guest link never carries the review parameters */
+  const url = (() => { const u = new URL(location.href); ['design', 'theme', 'layout', 'review'].forEach(k => u.searchParams.delete(k)); u.hash = ''; return u.toString(); })();
+  $('wa').href = 'https://wa.me/?text=' + encodeURIComponent('Meher & Arjun are getting married · Sunday 6 December 2026 · Ambar Bagh Palace, Jaipur · ' + url);
+  const toast = $('toast');
+  $('copy').addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(url); toast.textContent = 'Link copied'; } catch (_) { toast.textContent = url; }
+    toast.classList.add('on'); setTimeout(() => toast.classList.remove('on'), 1700);
+  });
+
+  /* countdown to the muhurat: digits roll; day-of and after states */
+  const muhurat = new Date('2026-12-06T17:00:00+05:30').getTime(), dayStart = new Date('2026-12-06T00:00:00+05:30').getTime();
+  const pad = n => String(n).padStart(2, '0');
+  const count = $('count'), note = $('countNote'), cdLabel = $('cd');
+  function setNum(el, val, soft){
+    const cur = el.querySelector('i:not(.out):not(.fout)'); if (!cur || cur.textContent === val) return;
+    if (reduce){ cur.textContent = val; return; }
+    const nx = document.createElement('i'); nx.textContent = val; nx.className = soft ? 'fin' : 'in';
+    cur.className = soft ? 'fout' : 'out'; el.appendChild(nx);
+    setTimeout(() => { cur.remove(); nx.className = ''; nx.style.position = ''; }, 270);
+  }
+  let after = false;
+  function tick(){
+    const now = Date.now();
+    if (now >= muhurat){
+      if (!after){ after = true; cdLabel.textContent = 'With love and gratitude'; count.hidden = true; note.textContent = 'Thank you for celebrating with us. Photographs will follow in the family group.'; }
+      return;
+    }
+    if (now >= dayStart){ count.classList.add('dayof'); cdLabel.textContent = 'Today is the day'; note.textContent = 'The baraat leaves at five. Wear your dancing shoes.'; }
+    let diff = muhurat - now;
+    const d = Math.floor(diff / 864e5); diff -= d * 864e5;
+    const h = Math.floor(diff / 36e5); diff -= h * 36e5;
+    const m = Math.floor(diff / 6e4); diff -= m * 6e4;
+    setNum($('dd'), String(d)); setNum($('hh'), pad(h)); setNum($('mm'), pad(m)); setNum($('ss'), pad(Math.floor(diff / 1e3)), true);
+  }
+  tick(); setInterval(tick, 1000);
+})();
+</script>
